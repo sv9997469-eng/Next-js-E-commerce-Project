@@ -1,10 +1,16 @@
+/* *{
+  margin: 0;
+   padding:0} */
+
+
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark*));
 @theme {
-  --color-primary: rgb(220 20 200);
-  --color-bg: white;
-  --color-text: black;
-  --color-muted: rgb(243 244 246);
+  --color-primary: rgb(128, 128, 128);
+  --color-bg: rgba(112, 128, 144, 1);
+  --color-text:  rgba(0,0,0,0.85);
+  --color-muted: rgb(0,0,0,0.5);
+  --color-secondary:rgb(107 33 168)
 }
 
 .dark {
@@ -13,3 +19,4 @@
   --color-text: white;
   --color-muted: rgb(31 41 55);
 }
+

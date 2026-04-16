@@ -21,11 +21,11 @@ export default function RootLayout({
       lang="en"
       className={``}
     >
-      <body className="bg-[var(--color-bg)]">
-        <ThemeProvider>
+      <body className="bg-gradient-to-l from-purple-300 to-gray-200">
+        {/* <ThemeProvider> */}
           <Navbar/>
         {children}
-        </ThemeProvider>
+        {/* </ThemeProvider> */}
         </body>
     </html>
   );
