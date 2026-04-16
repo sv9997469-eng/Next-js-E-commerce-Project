@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ThemeProvider from "../../themes/ThemeProvider";
 import "./globals.css";
 import Navbar from "../../components/Navbar";
-
+import Footer from "../../components/Footer";
 
 
 
@@ -21,11 +21,13 @@ export default function RootLayout({
       lang="en"
       className={``}
     >
-      <body className="bg-gradient-to-l from-purple-300 to-gray-200">
+      {/* bg-gradient-to-r from-purple-300 to-gray-200 */}
+      <body className="">
         {/* <ThemeProvider> */}
           <Navbar/>
         {children}
         {/* </ThemeProvider> */}
+        <Footer/>
         </body>
     </html>
   );

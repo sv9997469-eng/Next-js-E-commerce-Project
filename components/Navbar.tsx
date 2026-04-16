@@ -10,17 +10,17 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="stciky w-full bg-transparent  shadow-md text-text py-2 z-50">
-        <div className="mx-auto max-w-7xl  flex items-center justify-between px-4 py-2 ">
+      <nav className="stciky w-full bg-gradient-to-r from-purple-300 to-gray-200   text-text py-2 z-50">
+        <div className="mx-auto max-w-7xl  flex items-center justify-between px-4 py-2 bg-white rounded-full ">
           <Link
             href={""}
-            className="px-4 text-lg rounded cursor-pointer  font-bold flex justify-center items-center md:text-4xl"
+            className="px-4 text-lg rounded cursor-pointer  font-bold flex justify-center items-center md:text-2xl"
           >
             Logo
           </Link>
 
           {/* links */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-8">
             <Link href={"/"} className="text-xl font-medium hover:text-primary">
               Home
             </Link>
@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* action */}
           <div className="flex items-center">
             {/* <ThemeToggler /> */}
-          <button  className="hidden md:block px-4 py-2 bg-primary text-white font-medium">Sign Up</button>
+          <button  className="hidden md:block px-4 py-2 bg-primary text-white font-medium rounded-full">Sign Up</button>
 
             <button
               className="px-4 py-2 md:hidden"
