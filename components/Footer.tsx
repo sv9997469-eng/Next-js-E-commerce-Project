@@ -1,6 +1,6 @@
 export default function Footer(){
     return(<>
-    <section className="py-6 mt-8 bg-purple-800/50">
+    <section className="py-2 mt-8 bg-purple-800/50">
   <div className="max-w-7xl mx-auto mt-auto">
     {/*  */}
     <div className="flex flex-col md:flex-row justify-between">

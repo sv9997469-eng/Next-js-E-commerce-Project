@@ -1,0 +1,656 @@
+
+
+[
+
+
+  {
+    "id": 1,
+    "title": "Quantum Pulse Smartphone",
+    "price": 649.99,
+    "rating": 4.8,
+    "description": "6.7-inch OLED display with 120Hz refresh rate and 200MP camera.",
+    "category": "Electronics",
+    "stock": 45,
+    "image": "/phone1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "UltraBook Pro 14",
+    "price": 1299.00,
+    "rating": 4.9,
+    "description": "Slim aluminum chassis, M3 chip equivalent, 16GB RAM, 512GB SSD.",
+    "category": "Electronics",
+    "stock": 12,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 3,
+    "title": "SonicBoom Wireless Headphones",
+    "price": 199.50,
+    "rating": 4.7,
+    "description": "Active noise cancellation with 40-hour battery life.",
+    "category": "Electronics",
+    "stock": 88,
+    "image": "/wirelessheadphone.jpg"
+  },
+  {
+    "id": 4,
+    "title": "ZenTab Gaming Tablet",
+    "price": 450.00,
+    "rating": 4.5,
+    "description": "High-performance tablet optimized for mobile gaming and streaming.",
+    "category": "Electronics",
+    "stock": 23,
+    "image": "/tablet1.jpg"
+  },
+  {
+    "id": 5,
+    "title": "PixelWatch Active",
+    "price": 249.00,
+    "rating": 4.3,
+    "description": "Health tracking and GPS integration with 3-day battery.",
+    "category": "Electronics",
+    "stock": 56,
+    "image": "/smartWatch.jpg"
+  },
+  {
+    "id": 6,
+    "title": "ThunderBolt Mechanical Keyboard",
+    "price": 89.99,
+    "rating": 4.6,
+    "description": "RGB backlit with tactile blue switches for typing enthusiasts.",
+    "category": "Electronics",
+    "stock": 110,
+    "image": "/keyboard.jpg"
+  },
+  {
+    "id": 7,
+    "title": "SwiftClick Wireless Mouse",
+    "price": 45.00,
+    "rating": 4.4,
+    "description": "Ergonomic design with adjustable DPI for precision work.",
+    "category": "Electronics",
+    "stock": 200,
+    "image": "/mouse.jpg"
+  },
+  {
+    "id": 8,
+    "title": "VisionX 4K Monitor",
+    "price": 349.99,
+    "rating": 4.7,
+    "description": "27-inch 4K UHD monitor with HDR10 support.",
+    "category": "Electronics",
+    "stock": 15,
+    "image": "/monitor.jpg"
+  },
+  {
+    "id": 9,
+    "title": "CoreCharge Power Bank",
+    "price": 35.00,
+    "rating": 4.2,
+    "description": "20,000mAh capacity with fast charging capabilities.",
+    "category": "Electronics",
+    "stock": 150,
+    "image": "/powerbank.jpg"
+  },
+  {
+    "id": 10,
+    "title": "ClearLink Wi-Fi 6 Router",
+    "price": 129.00,
+    "rating": 4.6,
+    "description": "High-speed internet coverage for up to 2500 sq. ft.",
+    "category": "Electronics",
+    "stock": 40,
+    "image": "/router.jpg"
+  },
+  {
+    "id": 11,
+    "title": "EchoNode Smart Speaker",
+    "price": 79.00,
+    "rating": 4.5,
+    "description": "Voice-controlled assistant with premium sound quality.",
+    "category": "Electronics",
+    "stock": 75,
+    "image": "/speaker.jpg"
+  },
+  {
+    "id": 12,
+    "title": "VividCam Action 4K",
+    "price": 159.00,
+    "rating": 4.1,
+    "description": "Waterproof action camera for extreme sports.",
+    "category": "Electronics",
+    "stock": 34,
+    "image": "/webcamera.jpg"
+  },
+  {
+    "id": 13,
+    "title": "ProStream Webcam",
+    "price": 85.00,
+    "rating": 4.4,
+    "description": "1080p 60fps webcam with built-in ring light.",
+    "category": "Electronics",
+    "stock": 120,
+    "image": "/actioncamera.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Zaveri Pearls Earrings",
+    "price": 49.99,
+    "rating": 4.6,
+    "description": "Set of contemporary pearl drop and stud earrings.",
+    "category": "jewellery",
+    "stock": 25,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 15,
+    "title": "Diamond Solitaire Ring",
+    "price": 1200.00,
+    "rating": 4.9,
+    "description": "1-carat certified diamond set in 18k white gold.",
+    "category": "jewellery",
+    "stock": 5,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 16,
+    "title": "Rose Gold Pendant",
+    "price": 85.50,
+    "rating": 4.7,
+    "description": "Minimalist anti-tarnish locket neck chain.",
+    "category": "jewellery",
+    "stock": 60,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 17,
+    "title": "Sterling Silver Bracelet",
+    "price": 35.00,
+    "rating": 4.4,
+    "description": "Adjustable link bracelet with high-polish finish.",
+    "category": "jewellery",
+    "stock": 95,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 18,
+    "title": "Vintage Emerald Brooch",
+    "price": 210.00,
+    "rating": 4.5,
+    "description": "Hand-crafted brooch featuring emerald and zirconia.",
+    "category": "jewellery",
+    "stock": 8,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 19,
+    "title": "Celestial Moonstone Studs",
+    "price": 55.00,
+    "rating": 4.3,
+    "description": "Ethereal moonstone earrings inspired by night skies.",
+    "category": "jewellery",
+    "stock": 42,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 20,
+    "title": "Antique Gold Bangle Set",
+    "price": 350.00,
+    "rating": 4.8,
+    "description": "Traditional temple-style bangles with intricate engraving.",
+    "category": "jewellery",
+    "stock": 15,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 21,
+    "title": "Couple Promise Bracelets",
+    "price": 25.00,
+    "rating": 4.6,
+    "description": "Linked bracelets representing love and commitment.",
+    "category": "jewellery",
+    "stock": 120,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 22,
+    "title": "Platinum Infinity Band",
+    "price": 850.00,
+    "rating": 4.9,
+    "description": "Polished platinum band representing eternal unity.",
+    "category": "jewellery",
+    "stock": 10,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 23,
+    "title": "Sapphire Drop Earrings",
+    "price": 540.00,
+    "rating": 4.7,
+    "description": "Deep blue sapphire drops with micro-diamonds.",
+    "category": "jewellery",
+    "stock": 7,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 24,
+    "title": "Beaded Boho Anklet",
+    "price": 18.00,
+    "rating": 4.2,
+    "description": "Handmade colorful bead anklet for summer vibes.",
+    "category": "jewellery",
+    "stock": 200,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 25,
+    "title": "Men's Onyx Signet Ring",
+    "price": 145.00,
+    "rating": 4.5,
+    "description": "Bold black onyx stone set in sterling silver.",
+    "category": "jewellery",
+    "stock": 22,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 26,
+    "title": "Crystal Flower Hairpin",
+    "price": 12.99,
+    "rating": 4.1,
+    "description": "Elegant crystal-encrusted hairpin for weddings.",
+    "category": "jewellery",
+    "stock": 300,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 27,
+    "title": "Luxe Cotton T-Shirt",
+    "price": 24.99,
+    "rating": 4.4,
+    "description": "Organic cotton crew neck in multiple colors.",
+    "category": "Fashion",
+    "stock": 300,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 28,
+    "title": "Slim-Fit Indigo Jeans",
+    "price": 59.00,
+    "rating": 4.5,
+    "description": "Classic denim with a modern stretch for comfort.",
+    "category": "Fashion",
+    "stock": 150,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 29,
+    "title": "Velvet Evening Gown",
+    "price": 189.99,
+    "rating": 4.8,
+    "description": "Floor-length velvet dress for formal occasions.",
+    "category": "Fashion",
+    "stock": 20,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 30,
+    "title": "Active-Dry Shorts",
+    "price": 32.50,
+    "rating": 4.6,
+    "description": "Breathable fabric with moisture-wicking technology.",
+    "category": "Fashion",
+    "stock": 85,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 31,
+    "title": "Urban Leather Jacket",
+    "price": 220.00,
+    "rating": 4.7,
+    "description": "Premium faux leather jacket with quilted lining.",
+    "category": "Fashion",
+    "stock": 30,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 32,
+    "title": "Polka Dot Summer Scarf",
+    "price": 15.00,
+    "rating": 4.3,
+    "description": "Lightweight silk-blend scarf with playful patterns.",
+    "category": "Fashion",
+    "stock": 110,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 33,
+    "title": "Suede Chelsea Boots",
+    "price": 115.00,
+    "rating": 4.5,
+    "description": "Classic ankle boots with durable rubber soles.",
+    "category": "Fashion",
+    "stock": 45,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 34,
+    "title": "Graphic Hoodie",
+    "price": 45.00,
+    "rating": 4.4,
+    "description": "Oversized hoodie with unique artist-designed prints.",
+    "category": "Fashion",
+    "stock": 75,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 35,
+    "title": "Tailored Linen Blazer",
+    "price": 135.00,
+    "rating": 4.6,
+    "description": "Unstructured blazer perfect for business-casual.",
+    "category": "Fashion",
+    "stock": 25,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 36,
+    "title": "Retro High-Top Sneakers",
+    "price": 95.00,
+    "rating": 4.7,
+    "description": "Vintage-inspired kicks with modern cushioning.",
+    "category": "Fashion",
+    "stock": 60,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 37,
+    "title": "Braided Leather Belt",
+    "price": 29.99,
+    "rating": 4.2,
+    "description": "Durable cowhide leather with a burnished buckle.",
+    "category": "Fashion",
+    "stock": 140,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 38,
+    "title": "Chiffon Pleated Skirt",
+    "price": 55.00,
+    "rating": 4.5,
+    "description": "Mid-length skirt with a comfortable elastic waistband.",
+    "category": "Fashion",
+    "stock": 55,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 39,
+    "title": "Windbreaker Jacket",
+    "price": 68.00,
+    "rating": 4.4,
+    "description": "Water-resistant shell for hiking and outdoors.",
+    "category": "Fashion",
+    "stock": 40,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 40,
+    "title": "Chef's Grade Knife Set",
+    "price": 149.00,
+    "rating": 4.8,
+    "description": "8-piece stainless steel set with ergonomic handles.",
+    "category": "Kitchen",
+    "stock": 40,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 41,
+    "title": "Smart Air Fryer Pro",
+    "price": 120.00,
+    "rating": 4.7,
+    "description": "5.5L capacity with 10 preset cooking modes.",
+    "category": "Kitchen",
+    "stock": 65,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 42,
+    "title": "Cast Iron Dutch Oven",
+    "price": 85.00,
+    "rating": 4.9,
+    "description": "Heavy-duty enamel-coated pot for slow cooking.",
+    "category": "Kitchen",
+    "stock": 35,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 43,
+    "title": "Automatic Espresso Machine",
+    "price": 450.00,
+    "rating": 4.6,
+    "description": "Bean-to-cup machine with integrated milk frother.",
+    "category": "Kitchen",
+    "stock": 18,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 44,
+    "title": "Bamboo Cutting Board",
+    "price": 35.00,
+    "rating": 4.5,
+    "description": "Naturally antimicrobial boards in three sizes.",
+    "category": "Kitchen",
+    "stock": 120,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 45,
+    "title": "Silicone Baking Mat",
+    "price": 18.00,
+    "rating": 4.4,
+    "description": "Non-stick heat-resistant mats for pastries.",
+    "category": "Kitchen",
+    "stock": 200,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 46,
+    "title": "Electric Glass Kettle",
+    "price": 42.99,
+    "rating": 4.6,
+    "description": "1.7L kettle with blue LED lighting.",
+    "category": "Kitchen",
+    "stock": 90,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 47,
+    "title": "Stainless Mixing Bowls",
+    "price": 29.50,
+    "rating": 4.7,
+    "description": "Set of 5 nesting bowls with silicone bottoms.",
+    "category": "Kitchen",
+    "stock": 110,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 48,
+    "title": "Handheld Milk Frother",
+    "price": 12.00,
+    "rating": 4.3,
+    "description": "Battery-operated wand for lattes and coffee.",
+    "category": "Kitchen",
+    "stock": 250,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 49,
+    "title": "Digital Kitchen Scale",
+    "price": 22.00,
+    "rating": 4.5,
+    "description": "Precise measurements in grams and ounces.",
+    "category": "Kitchen",
+    "stock": 180,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 50,
+    "title": "Ceramic Frypan",
+    "price": 45.00,
+    "rating": 4.4,
+    "description": "Eco-friendly coating for healthy cooking.",
+    "category": "Kitchen",
+    "stock": 70,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 51,
+    "title": "Airtight Glass Jars",
+    "price": 38.00,
+    "rating": 4.6,
+    "description": "Set of 6 leakproof jars for pantry storage.",
+    "category": "Kitchen",
+    "stock": 50,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 52,
+    "title": "Magnetic Spice Rack",
+    "price": 24.00,
+    "rating": 4.5,
+    "description": "Space-saving rack that attaches to refrigerators.",
+    "category": "Kitchen",
+    "stock": 100,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 53,
+    "title": "Galactic Conquest Game",
+    "price": 55.00,
+    "rating": 4.7,
+    "description": "Space-themed strategy game for 2-4 players.",
+    "category": "Games",
+    "stock": 42,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 54,
+    "title": "NeonRacer Pro VR",
+    "price": 299.99,
+    "rating": 4.5,
+    "description": "Immersive VR racing with motion tracking.",
+    "category": "Games",
+    "stock": 15,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 55,
+    "title": "Classic Wooden Chess",
+    "price": 39.50,
+    "rating": 4.8,
+    "description": "Hand-carved pieces with magnetic board.",
+    "category": "Games",
+    "stock": 65,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 56,
+    "title": "UltraX Controller",
+    "price": 65.00,
+    "rating": 4.6,
+    "description": "Customizable buttons for PC and Console.",
+    "category": "Games",
+    "stock": 120,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 57,
+    "title": "Fantasy RPG Starter",
+    "price": 45.00,
+    "rating": 4.4,
+    "description": "Includes dice, rulebook, and maps.",
+    "category": "Games",
+    "stock": 80,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 58,
+    "title": "1000-Piece Puzzle",
+    "price": 19.99,
+    "rating": 4.3,
+    "description": "Landscape puzzle with high-quality printing.",
+    "category": "Games",
+    "stock": 150,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 59,
+    "title": "Gaming Keycaps",
+    "price": 25.00,
+    "rating": 4.2,
+    "description": "Custom PBT keycaps for mechanical keyboards.",
+    "category": "Games",
+    "stock": 200,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 60,
+    "title": "Mystery Mansion Card Game",
+    "price": 28.00,
+    "rating": 4.5,
+    "description": "Game of suspense and hidden identities.",
+    "category": "Games",
+    "stock": 95,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 61,
+    "title": "Portable Retro Console",
+    "price": 79.00,
+    "rating": 4.1,
+    "description": "Pre-loaded with 500 classic 8-bit Games.",
+    "category": "Games",
+    "stock": 55,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 62,
+    "title": "TCG Booster Box",
+    "price": 110.00,
+    "rating": 4.7,
+    "description": "36 packs of the latest trading card expansion.",
+    "category": "Games",
+    "stock": 20,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 63,
+    "title": "Large Gaming Mouse Pad",
+    "price": 15.00,
+    "rating": 4.6,
+    "description": "Extended surface for smooth mouse movement.",
+    "category": "Games",
+    "stock": 300,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 64,
+    "title": "Tabletop Miniatures Set",
+    "price": 125.00,
+    "rating": 4.8,
+    "description": "Hand-painted figurines for wargaming.",
+    "category": "Games",
+    "stock": 12,
+    "image": "/laptop1.png"
+  },
+  {
+    "id": 65,
+    "title": "Dungeon Master Screen",
+    "price": 30.00,
+    "rating": 4.9,
+    "description": "Heavy-duty cardboard screen with quick-reference tables.",
+    "category": "Games",
+    "stock": 50,
+    "image": "/laptop1.png"
+  }
+]

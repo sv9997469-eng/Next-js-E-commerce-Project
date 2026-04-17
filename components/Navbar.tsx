@@ -10,8 +10,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="stciky w-full bg-gradient-to-r from-purple-300 to-gray-200   text-text py-2 z-50">
-        <div className="mx-auto max-w-7xl  flex items-center justify-between px-4 py-2 bg-white rounded-full ">
+      <nav className="w-full  bg-gradient-to-r from-purple-300 to-gray-200   text-text py-2 z-50">
+        <div className="mx-auto max-w-7xl  flex items-center justify-between px-2 md:px-4 py-2 bg-white rounded-full ">
           <Link
             href={""}
             className="px-4 text-lg rounded cursor-pointer  font-bold flex justify-center items-center md:text-2xl"
@@ -21,19 +21,19 @@ export default function Navbar() {
 
           {/* links */}
           <div className="flex items-center gap-8">
-            <Link href={"/"} className="text-xl font-medium hover:text-primary">
+            <Link href={"/"} className="text-base font-medium md:text-xl  hover:text-primary">
               Home
             </Link>
             {/*  */}
             <Link
               href={"/products"}
-              className="text-xl font-medium hover:text-primary"
+              className="text-base font-medium md:text-xl  hover:text-primary"
             >
               Products
             </Link>
             {/*  */}
             {/*  */}
-            <Link href={"/cart"} className="text-xl font-medium hover:text-primary">
+            <Link href={"/cart"} className="text-base font-medium md:text-xl  hover:text-primary">
               Cart
             </Link>
             {/*  */}

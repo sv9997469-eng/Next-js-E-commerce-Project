@@ -1,7 +1,7 @@
 import img from "../../components/hero.jpg";
 import Image from "next/image";
 import Card from "../../components/Card";
-import cardImg from "../../components/CardImg1.jpg";
+import cardImg from "../../components/shirt-png-23759_11zon.png";
 import stickerImg from "../../components/handbag.png";
 import sneakerImg from "../../components/sneaker.png";
 import bootsImg from "../../components/boots.png";
@@ -14,7 +14,14 @@ import truckImg from "../../components/truck.png";
 import fastDeliveryImg from "../../components/express-delivery.png"
 import shieldImg from "../../components/shield.png";
 
-export default function Home() {
+export  default async function Home() {
+
+const res= await fetch("http://localhost:3000/api/products");
+const result =await res.json();
+
+const data= result.products.slice(0,4);
+
+
   return (
     <>
       <main className="py-4 bg-gradient-to-r from-purple-300 to-gray-200">
@@ -103,9 +110,9 @@ export default function Home() {
       <section className="">
         <div className="mx-auto max-w-7xl py-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {Array.from({ length: 4 }, (_, i) => ({ img: cardImg })).map(
-              (val, i) => (
-                <Card key={i} img={val.img} />
+            {data.map(
+              (val) => (
+                <Card key={val.id} product={val} />
               ),
             )}
           </div>
@@ -123,7 +130,7 @@ export default function Home() {
           <span className="text-6xl font-bold text-secondary mb-6 -skew-2">Why choosing Us ? </span>
 
           <div className="flex justify-center">
-          <Image src={thinkingImg} width={40} height={40} className="opacity-50"/>   
+          <Image src={thinkingImg} alt="sticker_img" width={40} height={40} className="opacity-50"/>   
          </div>
 
           </div>
