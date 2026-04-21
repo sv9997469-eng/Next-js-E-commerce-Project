@@ -11,7 +11,9 @@ export default function Navbar() {
   return (
     <>
       <nav className="w-full  bg-gradient-to-r from-purple-300 to-gray-200   text-text py-2 z-50">
-        <div className="mx-auto max-w-7xl  flex items-center justify-between px-2 md:px-4 py-2 bg-white rounded-full ">
+        <div className="mx-auto max-w-7xl  flex items-center justify-between px-2 md:px-4 py-2 bg-white rounded-full">
+
+          
           <Link
             href={""}
             className="px-4 text-lg rounded cursor-pointer  font-bold flex justify-center items-center md:text-2xl"

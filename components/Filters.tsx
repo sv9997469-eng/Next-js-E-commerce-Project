@@ -7,27 +7,42 @@ import { usePathname } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 
 export default function Filters() {
-   const router=useRouter();
-    const pathname=usePathname();
-    const params=useSearchParams();
-console.log(params.size)
-   function applyFilter(key,value){
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useSearchParams();
 
-  const query=new URLSearchParams(params);
-  query.set(key,value);
+  const selectedCategory = params.get("category") || "All";
+ const selectedSortingOrder =params.get("price_sorting");
 
-  router.push(`${pathname}?${query.toString()}`)
 
+
+
+
+
+  function applyFilter(key: string, value: string) {
+    const query = new URLSearchParams(params);
+    if (value === "All") {
+      query.delete(key);
+    } else {
+      query.set(key, value);
+    }
+    // page reseting pending //
+
+
+    router.push(`${pathname}?${query.toString()}`);
   }
 
   function removeFilter() {
     router.push("/products");
   }
 
+
+
+  
   return (
     <>
-      <div className="hidden w-64 shrink-0 md:block ">
-        <div className="shadow-md shadow-black  flex flex-col items-center sticky top-0  max-h-screen overflow-y-auto  py-8">
+      <div className="w-64 shrink-0">
+        <div className="py-8 flex flex-col items-center">
           {/*  */}
 
           <section>
@@ -43,6 +58,7 @@ console.log(params.size)
                       type="radio"
                       name="category"
                       value={val}
+                      checked={selectedCategory === val}
                       onChange={(e) => applyFilter("category", e.target.value)}
                     />
                     {val}
@@ -50,10 +66,9 @@ console.log(params.size)
                 ),
               )}
             </form>
-          </section>
-          {/*  */}
-          <section>
-            <p className="text-2xl font-medium mt-4 text-slate-800">Price</p>
+{/*  */}
+
+ <p className="text-2xl font-medium mt-4 text-slate-800">Price</p>
             <form className="flex flex-col gap-2 py-4">
               {["Low to High", "High to Low"].map((val, i) => (
                 <span
@@ -64,16 +79,27 @@ console.log(params.size)
                     type="radio"
                     value={val}
                     name="price"
-                    onChange={(e) => applyFilter("price_sorting", e.target.value)}
+                    checked={selectedSortingOrder === val}
+                    onChange={(e) =>
+                      applyFilter("price_sorting", e.target.value)
+                    }
                   />
                   {val}
                 </span>
               ))}
             </form>
+
           </section>
           {/*  */}
+         
+           
+        
+          {/*  */}
 
-          <button className="bg-primary px-4 py-2 text-white font-medium text-xl mt-4 cursor-pointer" onClick={removeFilter}>
+          <button
+            className="bg-primary px-4 py-2 text-white font-medium text-xl mt-4 cursor-pointer"
+            onClick={removeFilter}
+          >
             Clear Filters
           </button>
         </div>

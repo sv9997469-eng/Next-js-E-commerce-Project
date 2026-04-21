@@ -14,7 +14,7 @@ export default function Card({product}){
    <div className="space-y-4 flex flex-col justify-center">
      <p className="text-xl font-bold">{product.title}</p>
       <p className="text-lg">{product.price}</p>
-      <Link href={"/products"} className="px-4 py-2 ring-2 ring-primary  cursor-pointer hover:bg-primary text-center hover:text-white">Show now</Link>
+      <Link href={`/products/${product.id}`} className="px-4 py-2 ring-2 ring-primary  cursor-pointer hover:bg-primary text-center hover:text-white">Show now</Link>
     
     </div>
 

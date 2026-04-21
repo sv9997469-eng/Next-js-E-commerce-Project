@@ -5,11 +5,13 @@ import { CiHeart } from "react-icons/ci";
 import cardImg from "../../../components/shirt-png-23759_11zon.png";
 import Image from "next/image";
 import Filters from "../../../components/Filters";
-
+import Pagination from "../../../components/Pagination";
 
 
 export default async function Products({searchParams}) {
 const params= (await searchParams)|| {};
+
+
 
 const query = new URLSearchParams(params).toString()
 
@@ -24,11 +26,11 @@ const url=query ? `http://localhost:3000/api/products?${query}`:`http://localhos
 
   return (
     <>
-      <section className="mt-4">
-        <div className="flex gap-4">
+      <section className="mt-4 flex-1 overflow-hidden">
+        <div className="flex gap-4 overflow-y-auto">
           <Filters/>
           {/* *******2nd col************ */}
-          <div className="flex-1 bg-purple shadow-md shadow-black flex flex-col px-4">
+          <div className="bg-purple shadow-md shadow-black px-4 flex-1 py-8 overflow-y-auto">
             {/* first row */}
             <div className="flex justify-between items-center">
               {/*input  */}
@@ -63,11 +65,17 @@ const url=query ? `http://localhost:3000/api/products?${query}`:`http://localhos
             </div>
             {/* 2nd row */}
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
               {data.map((val) => (
                 <Card key={val.id} product={val} />
               ))}
             </div>
+
+{/* 3rd row */}
+
+    <Pagination/>
+
+
           </div>
         </div>
         {/* ***************************** */}

@@ -1,12 +1,12 @@
 export default function Footer(){
     return(<>
-    <section className="py-2 mt-8 bg-purple-800/50">
-  <div className="max-w-7xl mx-auto mt-auto">
+    <section className="py-4 mt-8 bg-gray-800/50">
+  <div className="max-w-7xl mx-auto mt-auto py-4">
     {/*  */}
     <div className="flex flex-col md:flex-row justify-between">
       {/* text */}
       <div className="flex flex-col gap-2">
-        <p className="font-medium text-5xl text-text font-[Lobster]">E-commerce</p>
+        <p className="font-medium text-5xl text-white font-[Lobster]">E-commerce</p>
         <p className="text-white text-lg tracking-wide">
           Lorem ipsum dolor sit amet consectetur elit.
         </p>

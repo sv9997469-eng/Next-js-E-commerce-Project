@@ -3,7 +3,7 @@ import ThemeProvider from "../../themes/ThemeProvider";
 import "./globals.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-
+// import CartContext from "../../components/cartcontext/CartProvider";
 
 
 export const metadata: Metadata = {
@@ -22,12 +22,17 @@ export default function RootLayout({
       className={``}
     >
       {/* bg-gradient-to-r from-purple-300 to-gray-200 */}
-      <body className="">
+      <body className="flex flex-col min-h-screen">
+        {/* <CartContext> */}
         {/* <ThemeProvider> */}
           <Navbar/>
+          <main className="flex-1">
         {children}
+        </main>
         {/* </ThemeProvider> */}
+       {/* </CartContext> */}
         <Footer/>
+      
         </body>
     </html>
   );

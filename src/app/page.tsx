@@ -143,7 +143,7 @@ const data= result.products.slice(0,4);
 </div>
 {/* ****stickers**** */}
 <div className="relative">
-<Image src={truckImg} width={60} height={60} className="absolute right-20 bottom-50 -rotate-10 opacity-50"/>
+<Image alt="truck_img" src={truckImg} width={60} height={60} className="absolute right-20 bottom-50 -rotate-10 opacity-50"/>
 </div>
 
 
@@ -166,7 +166,7 @@ const data= result.products.slice(0,4);
 {/*  */}
 </div>
 <div className="relative">
-<Image src={fastDeliveryImg} width={60} height={60} className="absolute right-30 bottom-70 -rotate-10 opacity-50"/>
+<Image alt="fast_delivery" src={fastDeliveryImg} width={60} height={60} className="absolute right-30 bottom-70 -rotate-10 opacity-50"/>
 </div>
 <div className="relative">
 <Image src={shieldImg} width={60} height={60} className="absolute right-20 bottom-20 -rotate-10 opacity-50"/>
