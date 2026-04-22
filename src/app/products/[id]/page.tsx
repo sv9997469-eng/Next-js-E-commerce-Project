@@ -5,16 +5,17 @@ import Image from "next/image";
 import AddtoCart from "../../../../components/AddtoCart";
 import { Rating } from "../../../../components/Rating";
 
+
 export default async function SingleProduct({params}){
+ 
 const {id} = await params;
 const res= await fetch(`http://localhost:3000/api/products/${id}`);
 const result=await res.json();
 const {data}=result;
-console.log(id)
 
-    
 
-console.log(data,"data")
+  
+// console.log(data,"data")
     return (<>
 
 <div className="py-2 px-10 flex gap-4 items-center mt-4">
@@ -56,10 +57,8 @@ console.log(data,"data")
 {/*  */}
 <p className="text-base font-medium">Quantity:</p>
 {/* ************** */}
- <div className="flex items-center gap-3">
- <button className="border-2 border-gray-300 w-10 cursor-pointer">-</button>1<button className="border-2 border-gray-300 w-10 cursor-pointer">+</button>
-</div>
-{/* *********** */}
+ 
+
 <p className="text-base text-slate-600 font-medium">Hurry up, few items are left!!</p>
 {/* cart */}
 <AddtoCart singleProduct={data}/>

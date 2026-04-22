@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { createContext } from "react";
 
 const CartContextProvider=createContext();
@@ -9,37 +9,81 @@ const CartContextProvider=createContext();
 export default function  CartContext({children}){
 const [cartItems,setCartItems]=useState([]);
 
+useEffect(()=>{
+const savedItems = localStorage.getItem("cartItem");
+if(savedItems){
+   setCartItems(JSON.parse(savedItems))
+}
+
+},[])
+
+
+
+useEffect(()=>{
+localStorage.setItem("cartItem",JSON.stringify(cartItems))
+},[cartItems])
+
+
+
 // add to cart//
-
-function increaseItems(val){
-const exsist=cartItems.find((val)=>val.id===id);
+function addTocart(product: {
+   
+}){
+   console.log(product)
+setCartItems((p)=>{
+const exsist= p.find((val)=>val.id===product.id);
 if(exsist){
-   return setCartItems((p)=>p.map((val)=>val.id===val.id ? {...val,qnty:val.qnty+1}:val))
-}
-return setCartItems([...cart,{...val,qnty:1}]);
-}
-// decrease//
+ if(exsist.qnty >= product.stock)return p ;
 
-function decreaseItems(val){
-const exsist=cartItems.find((val)=>val.id===val.id);
-if(exsist){
-   return setCartItems((p)=>p.map((val)=>val.id===val.id ? {...val,qnty:val.qnty-1}).filter((val)=>val.qnty>0))
+return p.map((val)=>val.id===product.id ? {...val,qnty:val.qnty+1}:val)
 }
+if(product.stock===0)return p;
+
+return [...p,{...product,qnty:1}]
+
+})
+
 
 }
-
+// ************************
+function increaseItems(id:number,stock:number){
+setCartItems((p)=>p.map((val)=>{
+   if(val.id === id){
+      if(val.qnty>=stock) return val;
+      return {...val ,qnty:val.qnty+1}
+   }
+   return val;
+}))
+}
+// *****************************//
+function decreaseItems(id){
+setCartItems((p)=>p.map((val)=>val.id===id ? {...val,qnty:val.qnty-1}:val).filter((val)=>val.qnty>0))
+}
 
 // remove items//
 function removeItems(id){
-setCartItems((p)=>p.filter((val)=>val.id!==id))
+setCartItems((p)=>p.filter((val)=>val.id!==id));
 }
 
+// ***//
+function cartClear(){
+   setCartItems([]);
+   localStorage.clear()
+}
 
-<CartContextProvider.Provider value={{cartItems,increaseItems,decreaseItems,removeItems}}>
+// price//
+ const totalPrice = cartItems.reduce((sum,val)=>sum+ (val.price*10 *val.qnty),0);
+   const gst =Math.floor(totalPrice * 0.18);
+   const shippingcharges=80;
+
+// ***********************//
+
+return (
+<CartContextProvider.Provider value={{cartItems,addTocart,increaseItems,decreaseItems,removeItems,cartClear,totalPrice,gst,shippingcharges}}>
     {children}
 </CartContextProvider.Provider>
 
-
+)
 
 }
 

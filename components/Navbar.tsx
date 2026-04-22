@@ -4,10 +4,12 @@ import { IoIosMenu } from "react-icons/io";
 import Link from "next/link";
 import ThemeToggler from "../themes/ThemeToogler";
 import { useState } from "react";
+import { useCartContext } from "./cartcontext/CartProvider";
+import { CiShoppingCart } from "react-icons/ci";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
+const {cartItems}=useCartContext()
   return (
     <>
       <nav className="w-full  bg-gradient-to-r from-purple-300 to-gray-200   text-text py-2 z-50">
@@ -22,7 +24,7 @@ export default function Navbar() {
           </Link>
 
           {/* links */}
-          <div className="flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-8">
             <Link href={"/"} className="text-base font-medium md:text-xl  hover:text-primary">
               Home
             </Link>
@@ -35,16 +37,22 @@ export default function Navbar() {
             </Link>
             {/*  */}
             {/*  */}
-            <Link href={"/cart"} className="text-base font-medium md:text-xl  hover:text-primary">
+            <div className="flex items-center gap-2 relative">
+             <Link href={"/cart"} className="text-base font-medium md:text-xl  hover:text-primary ">
               Cart
+              
             </Link>
+           <CiShoppingCart className="text-2xl relative"/>
+            <span className="absolute bottom-4 w-5 h-5 rounded-full text-white font-medium bg-secondary  left-16 flex justify-center items-center text-sm py-2 px-2">{cartItems.length}</span>
+            </div>
+           
             {/*  */}
-          </div>
-
+          
+</div>
           {/* action */}
           <div className="flex items-center">
             {/* <ThemeToggler /> */}
-          <button  className="hidden md:block px-4 py-2 bg-primary text-white font-medium rounded-full">Sign Up</button>
+          <button  className="hidden md:block px-4 py-2 bg-primary text-white font-medium rounded-full w-40">Sign Up</button>
 
             <button
               className="px-4 py-2 md:hidden"
