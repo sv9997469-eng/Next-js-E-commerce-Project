@@ -21,8 +21,10 @@ const url=query ? `http://localhost:3000/api/products?${query}`:`http://localhos
 
   const result = await res.json();
   const data = result.products;
+  const totalProducts=result.totalLength;
+  const limit = result.limit;
   // console.log(arr)
-  console.log(data);
+  // console.log(data);
 
   return (
     <>
@@ -73,7 +75,7 @@ const url=query ? `http://localhost:3000/api/products?${query}`:`http://localhos
 
 {/* 3rd row */}
 
-    <Pagination/>
+    <Pagination totalProducts={totalProducts} limit={limit}/>
 
 
           </div>

@@ -10,6 +10,11 @@ const {cartItems, addTocart ,increaseItems,decreaseItems}=useCartContext();
  const quantity = item?.qnty || 0 ;
 return (<>
 
+<p className="text-lg font-medium">Availibility: <span className="text-base">{singleProduct.stock-quantity}</span> </p>
+
+{ quantity<singleProduct.stock ? <p className="text-xl text-secondary font-medium">Hurry up, few items are left!!</p> : <p className="text-xl text-red-800 font-medium">Out of stock !!</p>}
+
+
 <div className="flex items-center gap-3">
 
 {/* ************************** */}
@@ -26,7 +31,7 @@ return (<>
 
 <div className="flex gap-5 items-center">
     {/*  */}
-    <button  className={ `px-4 py-2 text-white font-medium flex items-center justify-center gap-2   rounded text-xl ${singleProduct.stock === 0 ? "! bg-gray-300 cursor-not-allowed":"bg-secondary cursor-pointer"}`} onClick={()=>addTocart(singleProduct)}  disabled={singleProduct.stock==0}>Add to Cart < CiShoppingCart className="font-bold text-2xl"/></button>
+    <button  className="bg-purple-700 cursor-pointer  px-4 py-2 text-white font-medium flex items-center justify-center gap-2  rounded text-xl disabled:bg-gray-300 disabled:cursor-not-allowed"  onClick={()=>addTocart(singleProduct)}  disabled={quantity >= singleProduct.stock}>Add to Cart < CiShoppingCart className="font-bold text-2xl"/></button>
 {/*  */}
     <button className="ring-2 ring-slate-600 px-4 py-2 font-medium text-slate-600 cursor-pointer rounded">Buy Now</button>
     {/*  */}

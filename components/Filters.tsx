@@ -5,7 +5,7 @@
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-
+import {limit} from "./Navbar";
 export default function Filters() {
   const router = useRouter();
   const pathname = usePathname();
@@ -27,8 +27,8 @@ export default function Filters() {
       query.set(key, value);
     }
     // page reseting pending //
-
-
+      query.set("page",1)
+      query.set("limit","10")
     router.push(`${pathname}?${query.toString()}`);
   }
 

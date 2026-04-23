@@ -6,7 +6,8 @@ let filtered=[...products];
 const category=res.get("category")|| "All";
 const priceSorting=res.get("price_sorting");
  const sorting_title =res.get("sorting_title");
-
+const page =Number(res.get("page")) || 1 ;
+const limit = Number(res.get("limit")) || 10 ;
 
 if(category!=="All"){
 filtered=filtered.filter((val)=>val.category===category);
@@ -22,7 +23,10 @@ if(priceSorting==="High to Low"){
 if(sorting_title==="A-Z"){
  filtered.sort((a,b)=>a.title.localeCompare(b.title))
 }
+const startIndex= (page-1)*limit;
+const endIndex = startIndex + limit ;
+const paginated = filtered.slice(startIndex,endIndex);
 
 
-    return NextResponse.json({products: filtered,totalLength:products.length})
+    return NextResponse.json({products: paginated,totalLength:filtered.length,limit})
 }

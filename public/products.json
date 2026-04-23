@@ -11,7 +11,7 @@
     "description": "6.7-inch OLED display with 120Hz refresh rate and 200MP camera.",
     "category": "Electronics",
     "stock": 45,
-    "image": "/phone1.jpg"
+    "image": ["/phone1.jpg","/phone2.jpg","/phone3.jpg"]
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "description": "Slim aluminum chassis, M3 chip equivalent, 16GB RAM, 512GB SSD.",
     "category": "Electronics",
     "stock": 12,
-    "image": "/laptop1.png"
+    "image": ["/laptop1.jpg","/laptop2.jpg","/laptop3.jpg"]
   },
   {
     "id": 3,

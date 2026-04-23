@@ -4,7 +4,7 @@ import Image from "next/image";
 import halfStar from "./halfstar.png";
 export function Rating({rating}:{rating:number}){
     const starRating=[];
-    for(let i=1;i<5;i++){
+    for(let i=1;i<=Math.floor(rating);i++){
     starRating.push(<Image alt="full_star" src={fullStar} width={20} height={20} key={i}/>)
     }
 

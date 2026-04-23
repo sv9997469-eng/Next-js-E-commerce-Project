@@ -48,7 +48,7 @@ export default function Cart(){
 {/* first box img , details */}
 <div className="flex gap-4 items-center">
 <div className="py-2">
-<Image src={val.image} alt="cart_item" width={60} height={80} className="rounded"/>
+<Image src={val.image[0]} alt="cart_item" width={60} height={80} className="rounded"/>
 </div>
 {/*  */}
 <div className="flex flex-col">
@@ -94,7 +94,7 @@ export default function Cart(){
 
 <div className="flex justify-between">
 <p className="font-bold">SubTotal</p>
-<p className="font-medium">Rs.{totalPrice}</p>
+<p className="font-medium">Rs.{Math.round(totalPrice)}</p>
 </div>
 {/* *** */}
 <div className="flex justify-between">
@@ -109,7 +109,7 @@ export default function Cart(){
 {/*  */}
 <div className="flex justify-between">
 <p className="font-bold">Total Price</p>
-<p className="font-medium">Rs.{totalPrice >0 ? totalPrice + gst + shippingcharges : "00"}</p>
+<p className="font-medium">Rs.{totalPrice >0 ?  Math.round(totalPrice + gst + shippingcharges) : "00"}</p>
 </div>
 <div className="mt-4">
     <Link href={"/checkout"} className="px-4 py-2 bg-primary text-white rounded">Go to checkout</Link>

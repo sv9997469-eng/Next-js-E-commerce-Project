@@ -6,10 +6,11 @@ import ThemeToggler from "../themes/ThemeToogler";
 import { useState } from "react";
 import { useCartContext } from "./cartcontext/CartProvider";
 import { CiShoppingCart } from "react-icons/ci";
-
+export const limit=10;
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-const {cartItems}=useCartContext()
+const {cartItems}=useCartContext();
+ 
   return (
     <>
       <nav className="w-full  bg-gradient-to-r from-purple-300 to-gray-200   text-text py-2 z-50">
@@ -30,7 +31,7 @@ const {cartItems}=useCartContext()
             </Link>
             {/*  */}
             <Link
-              href={"/products"}
+              href={`/products?page=1&limit=${limit}`}
               className="text-base font-medium md:text-xl  hover:text-primary"
             >
               Products
@@ -78,7 +79,7 @@ const {cartItems}=useCartContext()
           <Link href="/" onClick={() => setOpen(false)}>
             Home
           </Link>
-          <Link className="" href={"/products"} onClick={() => setOpen(false)}>
+          <Link className="" href={`/products?page=1&limit=${limit}`} onClick={() => setOpen(false)}>
             Products
           </Link>
           <Link className="" href={"/cart"} onClick={() => setOpen(false)}>

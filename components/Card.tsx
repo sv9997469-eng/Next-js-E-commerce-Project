@@ -6,7 +6,7 @@ export default function Card({product}){
     
     <div className="rounded-2xl shadow-md hover:shadow-xl transition-all duartion-300   flex flex-col  px-4  overflow-hidden">
        <div className="relative h-50">
-     <Image src={product.image} alt="product-img" fill  className="object-contain"/>
+     <Image src={product.image[0]} alt="product-img" fill  className="object-contain"/>
 
      {/* <div className="absolute inset-0 bg-black/10 opacity:0 hover:opacity:100 transition-all duration-300"></div> */}
 </div>
@@ -20,7 +20,7 @@ export default function Card({product}){
     </p>
 
     <p className="text-xl font-bold text-primary">
-      Rs.{product.price * 10}
+      Rs.{Math.round(product.price * 10)}
     </p>
 
     {/* Button */}
