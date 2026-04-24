@@ -2,7 +2,7 @@
 
 import { CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
-// import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { useCartContext } from "./cartcontext/CartProvider";
 export default function AddtoCart({singleProduct}){
 const {cartItems, addTocart ,increaseItems,decreaseItems}=useCartContext();
@@ -31,9 +31,9 @@ return (<>
 
 <div className="flex gap-5 items-center">
     {/*  */}
-    <button  className="bg-purple-700 cursor-pointer  px-4 py-2 text-white font-medium flex items-center justify-center gap-2  rounded text-xl disabled:bg-gray-300 disabled:cursor-not-allowed"  onClick={()=>addTocart(singleProduct)}  disabled={quantity >= singleProduct.stock}>Add to Cart < CiShoppingCart className="font-bold text-2xl"/></button>
+    <button  className="bg-secondary cursor-pointer  px-4 py-2 text-white font-medium flex items-center justify-center gap-2  rounded text-xl disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-purple-600 transition-all duration-300"  onClick={()=>addTocart(singleProduct)}  disabled={quantity >= singleProduct.stock}>Add to Cart < CiShoppingCart className="font-bold text-2xl"/></button>
 {/*  */}
-    <button className="ring-2 ring-slate-600 px-4 py-2 font-medium text-slate-600 cursor-pointer rounded">Buy Now</button>
+    <Button variant={"outline"}  className="">Buy Now</Button>
     {/*  */}
    <CiHeart className="text-4xl text-slate-600 cursor-pointer"/>
    {/*  */}

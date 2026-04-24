@@ -5,7 +5,7 @@
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-import {limit} from "./Navbar";
+import { Button } from "@/components/ui/button"
 export default function Filters() {
   const router = useRouter();
   const pathname = usePathname();
@@ -41,9 +41,8 @@ export default function Filters() {
   
   return (
     <>
-      <div className="w-64 shrink-0">
-        <div className="py-8 flex flex-col items-center">
-          {/*  */}
+      <div className="w-64 shrink-0 h-full sticky top-0 bg-purple-200">
+        <div className="h-full overflow-y-auto py-8 flex flex-col items-center">
 
           <section>
             <p className="text-2xl font-medium mt-4 text-slate-800">CATEGORY</p>
@@ -66,7 +65,6 @@ export default function Filters() {
                 ),
               )}
             </form>
-{/*  */}
 
  <p className="text-2xl font-medium mt-4 text-slate-800">Price</p>
             <form className="flex flex-col gap-2 py-4">
@@ -90,18 +88,16 @@ export default function Filters() {
             </form>
 
           </section>
-          {/*  */}
          
            
         
-          {/*  */}
 
-          <button
-            className="bg-primary px-4 py-2 text-white font-medium text-xl mt-4 cursor-pointer"
+          <Button 
+            className="bg-primary px-4 py-6 text-white font-medium text-xl mt-4 cursor-pointer"
             onClick={removeFilter}
           >
             Clear Filters
-          </button>
+          </Button>
         </div>
       </div>
     </>

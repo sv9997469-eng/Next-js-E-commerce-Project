@@ -31,7 +31,7 @@
     "description": "Active noise cancellation with 40-hour battery life.",
     "category": "Electronics",
     "stock": 88,
-    "image": "/wirelessheadphone.jpg"
+    "image": ["/wirelessheadphone.jpg","/headphone2.jpg","/headphone3.jpg"]
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "description": "High-performance tablet optimized for mobile gaming and streaming.",
     "category": "Electronics",
     "stock": 23,
-    "image": "/tablet1.jpg"
+    "image": ["/tablet1.jpg","/tab2.jpg","/tab3.jpg"]
   },
   {
     "id": 5,
@@ -51,7 +51,7 @@
     "description": "Health tracking and GPS integration with 3-day battery.",
     "category": "Electronics",
     "stock": 56,
-    "image": "/smartWatch.jpg"
+    "image": ["/smartWatch.jpg","/smartwatch2.jpg","/smartwatch3.jpg"]
   },
   {
     "id": 6,
@@ -61,7 +61,7 @@
     "description": "RGB backlit with tactile blue switches for typing enthusiasts.",
     "category": "Electronics",
     "stock": 110,
-    "image": "/keyboard.jpg"
+    "image": ["/keyboard.jpg","/keyboard2.jpg","/keyboard3.jpg"]
   },
   {
     "id": 7,
@@ -71,7 +71,7 @@
     "description": "Ergonomic design with adjustable DPI for precision work.",
     "category": "Electronics",
     "stock": 200,
-    "image": "/mouse.jpg"
+    "image": ["/mouse.jpg","/mouse2.jpg","/mouse3.jpg"]
   },
   {
     "id": 8,
@@ -81,7 +81,7 @@
     "description": "27-inch 4K UHD monitor with HDR10 support.",
     "category": "Electronics",
     "stock": 15,
-    "image": "/monitor.jpg"
+    "image": ["/monitor.jpg","/monitor2.jpg","/monitor3.jpg"]
   },
   {
     "id": 9,
@@ -91,7 +91,7 @@
     "description": "20,000mAh capacity with fast charging capabilities.",
     "category": "Electronics",
     "stock": 150,
-    "image": "/powerbank.jpg"
+    "image": ["/powerbank.jpg","/powerbank2.jpg","/powerbank3.jpg"]
   },
   {
     "id": 10,
@@ -101,7 +101,7 @@
     "description": "High-speed internet coverage for up to 2500 sq. ft.",
     "category": "Electronics",
     "stock": 40,
-    "image": "/router.jpg"
+    "image": ["/router.jpg","/router2.jpg","/router3.jpg"]
   },
   {
     "id": 11,

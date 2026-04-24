@@ -8,6 +8,7 @@ import SingleProductPageImages from "../../../../components/SingleProductPageIma
 
 export default async function SingleProduct({ params }) {
   const { id } = await params;
+  await new Promise((res)=>setTimeout(res,5000))
   const res = await fetch(`http://localhost:3000/api/products/${id}`);
   const result = await res.json();
   const { data } = result;

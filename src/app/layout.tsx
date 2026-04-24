@@ -4,7 +4,11 @@ import "./globals.css";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import CartContext from "../../components/cartcontext/CartProvider";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,20 +23,22 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={``}
+      className={cn("font-sans", geist.variable)}
     >
       {/* bg-gradient-to-r from-purple-300 to-gray-200 */}
-      <body className="flex flex-col min-h-screen">
+      <body className="">
+
         <CartContext>
         {/* <ThemeProvider> */}
           <Navbar/>
-          <main className="flex-1">
+     
+          <main className="">
         {children}
         </main>
+      
         {/* </ThemeProvider> */}
        </CartContext>
         <Footer/>
-      
         </body>
     </html>
   );
