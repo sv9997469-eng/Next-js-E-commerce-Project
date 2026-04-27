@@ -111,7 +111,7 @@
     "description": "Voice-controlled assistant with premium sound quality.",
     "category": "Electronics",
     "stock": 75,
-    "image": "/speaker.jpg"
+    "image": ["/speaker.jpg","/speaker2.jpg","/speaker3.jpg"]
   },
   {
     "id": 12,
@@ -121,7 +121,7 @@
     "description": "Waterproof action camera for extreme sports.",
     "category": "Electronics",
     "stock": 34,
-    "image": "/webcamera.jpg"
+    "image": ["/webcamera.jpg","/webcamera2.jpg","/webcamera3.jpg"]
   },
   {
     "id": 13,
@@ -131,7 +131,7 @@
     "description": "1080p 60fps webcam with built-in ring light.",
     "category": "Electronics",
     "stock": 120,
-    "image": "/actioncamera.jpg"
+    "image": ["/actioncamera.jpg","/webcamera2.jpg","/webcamera3.jpg"]
   },
   {
     "id": 14,
@@ -141,7 +141,7 @@
     "description": "Set of contemporary pearl drop and stud earrings.",
     "category": "jewellery",
     "stock": 25,
-    "image": "/laptop1.png"
+    "image": ["/earrings.jpg","/earrings2.jpg","/earrings3.jpg"]
   },
   {
     "id": 15,
@@ -151,7 +151,7 @@
     "description": "1-carat certified diamond set in 18k white gold.",
     "category": "jewellery",
     "stock": 5,
-    "image": "/laptop1.png"
+    "image": ["/ring.jpg","/ring2.jpg","/ring3.jpg"]
   },
   {
     "id": 16,
@@ -161,7 +161,7 @@
     "description": "Minimalist anti-tarnish locket neck chain.",
     "category": "jewellery",
     "stock": 60,
-    "image": "/laptop1.png"
+    "image": ["/pendant.jpg","/pendant2.jpg","/pendant3.jpg"]
   },
   {
     "id": 17,
@@ -171,7 +171,7 @@
     "description": "Adjustable link bracelet with high-polish finish.",
     "category": "jewellery",
     "stock": 95,
-    "image": "/laptop1.png"
+    "image":["/braclet.jpg","/braclet2.jpg","/braclet3.jpg"]
   },
   {
     "id": 18,
@@ -181,7 +181,7 @@
     "description": "Hand-crafted brooch featuring emerald and zirconia.",
     "category": "jewellery",
     "stock": 8,
-    "image": "/laptop1.png"
+    "image": ["/brooch.jpg","/brooch2.jpg","/brooch3.jpg"]
   },
   {
     "id": 19,
@@ -191,7 +191,7 @@
     "description": "Ethereal moonstone earrings inspired by night skies.",
     "category": "jewellery",
     "stock": 42,
-    "image": "/laptop1.png"
+    "image": ["/studs.jpg","/studs2.jpg","/studs3.jpg"]
   },
   {
     "id": 20,
@@ -201,7 +201,7 @@
     "description": "Traditional temple-style bangles with intricate engraving.",
     "category": "jewellery",
     "stock": 15,
-    "image": "/laptop1.png"
+    "image": ["/bangles.jpg","/bangles2.jpg","/bangles3.jpg"]
   },
   {
     "id": 21,
@@ -211,7 +211,7 @@
     "description": "Linked bracelets representing love and commitment.",
     "category": "jewellery",
     "stock": 120,
-    "image": "/laptop1.png"
+    "image": ["/promisebraclet.jpg","/promisebraclet2.jpg","/promisebraclet3.jpg"]
   },
   {
     "id": 22,
@@ -221,7 +221,7 @@
     "description": "Polished platinum band representing eternal unity.",
     "category": "jewellery",
     "stock": 10,
-    "image": "/laptop1.png"
+    "image": ["/band.jpg","/band2.jpg","/band3.jpg"]
   },
   {
     "id": 23,
@@ -231,7 +231,7 @@
     "description": "Deep blue sapphire drops with micro-diamonds.",
     "category": "jewellery",
     "stock": 7,
-    "image": "/laptop1.png"
+    "image": ["/blueearring","/blueearring2","/blueearring3"]
   },
   {
     "id": 24,
@@ -241,7 +241,7 @@
     "description": "Handmade colorful bead anklet for summer vibes.",
     "category": "jewellery",
     "stock": 200,
-    "image": "/laptop1.png"
+    "image": ["/anklets.jpg","/anklets2.jpg","/anklets3.jpg"]
   },
   {
     "id": 25,
@@ -251,7 +251,7 @@
     "description": "Bold black onyx stone set in sterling silver.",
     "category": "jewellery",
     "stock": 22,
-    "image": "/laptop1.png"
+    "image": ["/blackring.jpg","/blackring2.jpg","/blackring3.jpg"]
   },
   {
     "id": 26,

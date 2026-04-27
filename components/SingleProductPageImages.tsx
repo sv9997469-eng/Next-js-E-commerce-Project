@@ -31,15 +31,30 @@ function selectImg(value){
 
   return (
     <>
-      <div className="col-span-4 flex flex-col justify-center">
+
+ <div className="col-span-12 flex items-center rounded-lg">
+        <div className="h-90 rounded-lg w-full flex items-center justify-center relative">
+          <Image
+            src={defaultSrc}
+            alt="single_product"
+            fill
+            className="object-contain rounded-lg"
+          />
+
+
+        </div>
+      </div>
+{/*  */}
+
+      <div className="col-span-12 flex gap-3 py-3">
         {data.map((value, i) => (
           <span key={i + 1}>
             <Image
               src={value}
               alt="single_product"
-              width={100}
-              height={200}
-              className="object-cover rounded mb-3 cursor-pointer shadow-md shadow-black/50 h-26 w-200"
+              width={80}
+              height={80}
+              className={`object-cover p-2  rounded-lg mb-3 cursor-pointer border border-gray-200 hover:border-purple-500 transition shadow-sm hover:scale-105 ${value===defaultSrc ? "   border-2 border-purple-500":""}`}
               onClick={() => {
                selectImg(value);
               }}
@@ -47,17 +62,9 @@ function selectImg(value){
           </span>
         ))}
       </div>
+      
       {/*  */}
-      <div className="col-span-6 flex items-center">
-        <div className="relative h-50 w-70 rounded">
-          <Image
-            src={defaultSrc}
-            alt="single_product"
-            fill
-            className="object-contain rounded"
-          />
-        </div>
-      </div>
+     
     </>
   );
 }

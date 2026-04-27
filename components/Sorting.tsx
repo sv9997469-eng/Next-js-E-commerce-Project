@@ -1,62 +1,37 @@
+
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
-import { Button } from "@/components/ui/button";
+import * as React from "react"
+
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-export function SortDropdown() {
-  const router = useRouter();
-  const params = useSearchParams();
-
-  const currentSort = params.get("sort") || "";
-
-  function handleSort(value: string) {
-    const query = new URLSearchParams(params);
-
-    if (value) {
-      query.set("sort", value);
-    } else {
-      query.delete("sort");
-    }
-
-    query.set("page", "1"); // reset page
-    router.push(`?${query.toString()}`);
-  }
+export default function DropdownMenuRadioGroupDemo() {
+  const [position, setPosition] = React.useState("bottom")
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Sort</Button>
+        <Button variant="outline">Open</Button>
       </DropdownMenuTrigger>
-
-      <DropdownMenuContent>
-        <DropdownMenuRadioGroup
-          value={currentSort}
-          onValueChange={handleSort}
-        >
-          <DropdownMenuRadioItem value="az">
-            A → Z
-          </DropdownMenuRadioItem>
-
-          <DropdownMenuRadioItem value="za">
-            Z → A
-          </DropdownMenuRadioItem>
-
-          <DropdownMenuRadioItem value="price-asc">
-            Price Low → High
-          </DropdownMenuRadioItem>
-
-          <DropdownMenuRadioItem value="price-desc">
-            Price High → Low
-          </DropdownMenuRadioItem>
-        </DropdownMenuRadioGroup>
+      <DropdownMenuContent className="w-32">
+        <DropdownMenuGroup>
+          <DropdownMenuLabel>Panel Position</DropdownMenuLabel>
+          <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+            <DropdownMenuRadioItem value="top">Top</DropdownMenuRadioItem>
+            <DropdownMenuRadioItem value="bottom">Bottom</DropdownMenuRadioItem>
+            <DropdownMenuRadioItem value="right">Right</DropdownMenuRadioItem>
+          </DropdownMenuRadioGroup>
+        </DropdownMenuGroup>
       </DropdownMenuContent>
     </DropdownMenu>
-  );
+  )
 }

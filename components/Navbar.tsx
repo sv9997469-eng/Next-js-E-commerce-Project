@@ -13,11 +13,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="h-[70px] w-full  bg-gradient-to-r from-purple-300 to-gray-200   text-text py-2 z-50">
-        <div className="mx-auto max-w-7xl  flex items-center justify-between px-2 md:px-4 py-2 bg-white rounded-full">
+      <nav className="fixed top-0 left-0 w-full z-50 
+bg-white/60 backdrop-blur-lg 
+border-b border-white/30 shadow-sm h-[70px]">
+
+        <div className="mx-auto max-w-7xl  flex items-center justify-between px-2 md:px-4 py-2">
           <Link
             href={""}
-            className="px-4 text-lg rounded cursor-pointer  font-bold flex justify-center items-center md:text-2xl"
+            className="text-xl font-bold tracking-wide text-purple-600 md:text-2xl"
           >
             Logo
           </Link>
@@ -26,14 +29,14 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-8">
             <Link
               href={"/"}
-              className="text-base font-medium md:text-xl  hover:text-primary"
+              className="text-base font-medium md:text-xl text-gray-800 hover:text-purple-600 transition"
             >
               Home
             </Link>
             {/*  */}
             <Link
-              href={`/products?page=1&limit=${limit}`}
-              className="text-base font-medium md:text-xl  hover:text-primary"
+              href={`/products?page=1&limit=10`}
+              className="text-base font-medium md:text-xl text-gray-800 hover:text-purple-600 transition"
             >
               Products
             </Link>
@@ -42,7 +45,7 @@ export default function Navbar() {
             <div className="flex items-center gap-2 relative">
               <Link
                 href={"/cart"}
-                className="text-base font-medium md:text-xl  hover:text-primary "
+                className="text-base font-medium md:text-xl text-gray-800 hover:text-purple-600 transition "
               >
                 Cart
               </Link>

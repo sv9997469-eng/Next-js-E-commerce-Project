@@ -1,22 +1,9 @@
-"use client";
-import { useRouter } from "next/router";
-import { usePathname } from "next/navigation";
-import { useParams } from "next/navigation";
 
-  const router=useRouter();
-  const pathname=usePathname();
-  const params=useParams();
+export function makeUrLQuery(params){
 
-// export function applyFilter(key,value){
+  const nonEmptyValues= Object.fromEntries(Object.entries(params).filter(([Key,val])=>val!=="" || val!==null))
 
-// const query=new URLSearchParams(params);
-// query.set(key,value);
+ return new URLSearchParams(nonEmptyValues).toString();
 
-// router.push(`${pathname}?${query.toString()}`)
+}
 
-// }
-
-
-// export function removeFilter(){
-//   router.push(`/products`)
-// }

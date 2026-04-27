@@ -26,8 +26,9 @@ export default function RootLayout({
       className={cn("font-sans", geist.variable)}
     >
       {/* bg-gradient-to-r from-purple-300 to-gray-200 */}
+      {/* bg-[linear-gradient(to_right,#dab3ff_50%,white_50%)] */}
       <body className="">
-
+ 
         <CartContext>
         {/* <ThemeProvider> */}
           <Navbar/>

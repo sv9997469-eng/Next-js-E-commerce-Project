@@ -16,51 +16,46 @@ export default async function SingleProduct({ params }) {
   console.log(data, "data");
   return (
     <>
-      <div className="py-2 px-10 flex gap-4 items-center mt-4">
-        <span className="text-slate-500 font-medium flex items-center gap-2">
-          {" "}
-          <Link href={`/products`}>
-            <FaArrowLeft className="cursor-pointer hover:text-gray-200" />
-          </Link>
-          go back
-        </span>{" "}
-        <span className="text-slate-600 font-medium flex items-center gap-1">
-          <IoDiscOutline /> Product details
-        </span>
-      </div>
-
-      <div className="grid lg:grid-cols-2 gap-10 px-30 mt-10">
-        <div className="grid grid-cols-12 gap-8">
+<section className="py-10">
+        
+     
+<div className="max-w-6xl mx-auto mt-12 px-6">
+      <div className="grid lg:grid-cols-2 gap-10 px-30 mt-5 bg-transparent    rounded-4xl  p-8 items-start  z-40">
+        <div className="grid grid-cols-12 gap-4 py-4 border border-gray-300 rounded-md   px-4">
+          
          {data?.image && <SingleProductPageImages data={data?.image} />}
           {/* img column */}
-          {/* <Image src={data.image} alt="single_product" width={400} height={200} className="object-contain rounded"/> */}
+          
         </div>
 
         {/* *************** */}
 
-        <div className="flex flex-col gap-3">
-          <div className="text-lg text-slate-800 font-medium ring-2 ring-slate-200 w-30 rounded-full flex items-center justify-center tracking-wide">
+        <div className="flex flex-col gap-2">
+          <div className="text-sm text-gray-600 border border-gray-300 px-4 py-1 rounded-full w-fit">
             {data.category}
           </div>
           {/*  */}
 
-          <p className="text-2xl font-bold">{data.title}</p>
+          <p className="text-3xl font-semibold text-gray-800 mt-2">{data.title}</p>
 
           <Rating rating={data.rating} />
 
-          <p className="text-xl font-medium">Rs.{data.price * 10}</p>
+          <p className="text-2xl font-bold text-purple-600 mt-3">Rs.{data.price * 10}</p>
           {/*  */}
 
           <dl>
             <dt className="text-slate-700 font-medium text-lg">Description:</dt>
-            <dd className="text-base font-medium text-slate-500">
+         
+         <div className="my-4 border-t border-gray-200"></div>
+
+            <dd className="text-sm  text-gray-500 leading-relaxed mt-1">
               {data.description}
             </dd>
           </dl>
           {/*  */}
 
           {/*  */}
-          <p className="text-base font-medium">Quantity:</p>
+          
           {/* ************** */}
 
           {/* cart */}
@@ -68,6 +63,9 @@ export default async function SingleProduct({ params }) {
           {/*  */}
         </div>
       </div>
+</div>
+
+</section>
     </>
   );
 }

@@ -19,7 +19,7 @@ while(starRating.length<5){
 
     return(<>
     
-    {rating && <p className="flex items-center">{starRating}</p>}
+    {rating && <p className="flex items-center mt-2">{starRating}</p>}
   
     {rating}
     </>)

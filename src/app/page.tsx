@@ -1,7 +1,7 @@
 import img from "../../components/hero.jpg";
 import Image from "next/image";
 import Card from "../../components/Card";
-import cardImg from "../../components/shirt-png-23759_11zon.png";
+import Link from "next/link";
 import stickerImg from "../../components/handbag.png";
 import sneakerImg from "../../components/sneaker.png";
 import bootsImg from "../../components/boots.png";
@@ -13,25 +13,29 @@ import thinkingImg from "../../components/thinking.png"
 import truckImg from "../../components/truck.png";
 import fastDeliveryImg from "../../components/express-delivery.png"
 import shieldImg from "../../components/shield.png";
+import { FaEye } from "react-icons/fa6";
 
+// import { limit } from "../../components/Navbar";
 export  default async function Home() {
 
 const res= await fetch("http://localhost:3000/api/products");
 const result =await res.json();
 
-const data= result.products.slice(0,4);
+const data= result.products.slice(4,8);
 
 
   return (
     <>
-      <main className="py-4 bg-gradient-to-r from-purple-300 to-gray-200">
+      <main className="py-8 bg-gradient-to-br from-slate-100 via-purple-50 to-slate-200">
+    
         <div className="max-w-7xl mx-auto">
+         
           <div className="grid lg:grid-cols-2 items-center  p-4 rounded-xl">
             <div className="flex flex-col  gap-8 py-8">
               <div className="flex justify-center">
-                <div className="bg-amber-400 h-30 w-30 rounded-full flex justify-center items-center flex-col -rotate-4 ">
-                  <p className="text-xl font-bold -skew-4">Exclusive</p>
-                  <p className="text-xl  font-bold -skew-4">offers</p>
+                <div className="bg-amber-400 h-20 w-20 rounded-full flex justify-center items-center flex-col -rotate-4 ">
+                  <p className="text-sm font-bold -skew-4">Exclusive</p>
+                  <p className="text-sm  font-bold -skew-4">offers</p>
                 </div>
               </div>
               {/* ********** */}
@@ -106,10 +110,19 @@ const data= result.products.slice(0,4);
         </div>
       </main>
 
+      
+
+          
       {/* features */}
       <section className="">
         <div className="mx-auto max-w-7xl py-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div className="flex justify-between">
+          <p className="text-lg text-purple-600 font-medium">Branded Deals</p>
+          <Link href={`/products?page=1&limit=10`}  className="text-purple-600 text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-purple-600   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"><FaEye/>   View more</Link>
+         </div>
+
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 py-8">
             {data.map(
               (val) => (
                 <Card key={val.id} product={val} />

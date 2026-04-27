@@ -3,11 +3,15 @@ import { Suspense } from "react";
 import Filters from "../../../components/Filters";
 import ProductCardSkelton from "../../../components/CardSkelton";
 import ProductPageContent from "../../../components/ProductList";
+import {makeUrLQuery} from "../../../components/utils/applyFilters"
+
+
+
 
 export default async function Products({ searchParams }) {
   const params = (await searchParams) || {};
 
-  const query = new URLSearchParams(params).toString();
+  const query = makeUrLQuery(params)
 
   const url = query
     ? `http://localhost:3000/api/products?${query}`
@@ -20,7 +24,7 @@ export default async function Products({ searchParams }) {
 
   return (
     <>
-      <section className="mt-4 flex h-[calc(100vh-70px)] overflow-hidden gap-2">
+      <section className="mt-10 flex h-[calc(100vh-70px)] overflow-hidden gap-2">
         <Filters />
         {/* *******2nd col************ */}
         <div className="px-4 flex-1 py-8 overflow-y-auto">
