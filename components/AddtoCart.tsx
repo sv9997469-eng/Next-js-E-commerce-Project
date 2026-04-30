@@ -11,21 +11,21 @@ export default function AddtoCart({ singleProduct }) {
   const quantity = item?.qnty || 0;
   return (
     <>
-      <p className="text-sm font-medium text-gray-700">Quantity:</p>
-      <p className="text-lg font-medium">
+     
+      <p className="text-md font-medium">
         Availibility:{" "}
         <span className="text-base">{singleProduct.stock - quantity}</span>{" "}
       </p>
 
       {quantity < singleProduct.stock ? (
-        <p className="text-xl text-secondary font-medium">
+        <p className="text-xl text-red-800 font-medium">
           Hurry up, few items are left!!
         </p>
       ) : (
         <p className="text-xl text-red-800 font-medium">Out of stock !!</p>
       )}
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-3 mt-3">
         {/* ************************** */}
 
         <button
@@ -47,24 +47,24 @@ export default function AddtoCart({ singleProduct }) {
         {/* *********** */}
       </div>
 
-      <div className="flex gap-5 items-center">
+      <div className="flex gap-5 items-center mt-3">
         {/*  */}
-        <button
-          className="bg-secondary cursor-pointer  px-4 py-2 whitespace-nowrap text-white font-medium flex items-center justify-center gap-2  rounded text-md disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-purple-600 transition-all duration-300"
+        <Button
+          className="bg-primary cursor-pointer  px-4 py-2 whitespace-nowrap text-white font-medium flex items-center justify-center gap-2  rounded-xl text-md disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-purple-600 transition-all duration-300"
           onClick={() => addTocart(singleProduct)}
           disabled={quantity >= singleProduct.stock}
         >
           Add to Cart <CiShoppingCart className="font-bold text-2xl" />
-        </button>
+        </Button>
         {/*  */}
         <Button
           variant={"outline"}
-          className="text-secondary border-secondary hover:bg-secondary"
+          className="text-primary border-primary hover:bg-primary text-md"
         >
           Buy Now
         </Button>
         {/*  */}
-        <CiHeart className="text-4xl text-secondary cursor-pointer" />
+        <CiHeart className="text-4xl text-primary cursor-pointer" />
         {/*  */}
       </div>
     </>

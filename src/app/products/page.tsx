@@ -24,10 +24,12 @@ export default async function Products({ searchParams }) {
 
   return (
     <>
-      <section className="mt-10 flex h-[calc(100vh-70px)] overflow-hidden gap-2">
+    <section>
+      <div className="mt-20 flex h-[calc(100vh-70px)] overflow-hidden gap-4 py-2 max-w-7xl mx-auto">
+        
         <Filters />
         {/* *******2nd col************ */}
-        <div className="px-4 flex-1 py-8 overflow-y-auto">
+        <div className="px-4 flex-1 py-2 overflow-y-auto rounded-lg no-scrollbar">
           {/* first row */}
           {/* search and sort */}
            <Search_Sort/>
@@ -40,6 +42,7 @@ export default async function Products({ searchParams }) {
         </div>
 
         {/* ***************************** */}
+      </div>
       </section>
     </>
   );

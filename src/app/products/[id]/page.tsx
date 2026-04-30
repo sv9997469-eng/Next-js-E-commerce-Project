@@ -20,8 +20,8 @@ export default async function SingleProduct({ params }) {
         
      
 <div className="max-w-6xl mx-auto mt-12 px-6">
-      <div className="grid lg:grid-cols-2 gap-10 px-30 mt-5 bg-transparent    rounded-4xl  p-8 items-start  z-40">
-        <div className="grid grid-cols-12 gap-4 py-4 border border-gray-300 rounded-md   px-4">
+      <div className="grid lg:grid-cols-2 gap-10 px-30 mt-5 bg-transparent    rounded-4xl  py-4 items-start  z-40">
+        <div className="grid grid-cols-12 gap-4 py-2 border border-gray-300 rounded-md   px-4">
           
          {data?.image && <SingleProductPageImages data={data?.image} />}
           {/* img column */}
@@ -30,13 +30,13 @@ export default async function SingleProduct({ params }) {
 
         {/* *************** */}
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 py-1">
           <div className="text-sm text-gray-600 border border-gray-300 px-4 py-1 rounded-full w-fit">
             {data.category}
           </div>
           {/*  */}
 
-          <p className="text-3xl font-semibold text-gray-800 mt-2">{data.title}</p>
+          <p className="text-xl font-semibold text-gray-800 mt-2">{data.title}</p>
 
           <Rating rating={data.rating} />
 
@@ -44,13 +44,13 @@ export default async function SingleProduct({ params }) {
           {/*  */}
 
           <dl>
-            <dt className="text-slate-700 font-medium text-lg">Description:</dt>
+            <dt className="text-slate-700 font-medium text-md">Description:</dt>
          
-         <div className="my-4 border-t border-gray-200"></div>
-
+      
             <dd className="text-sm  text-gray-500 leading-relaxed mt-1">
               {data.description}
             </dd>
+            <div className="my-4 border-t border-gray-200"></div>
           </dl>
           {/*  */}
 

@@ -1,81 +1,29 @@
-export default function Footer(){
-    return(<>
-<section className="mt-20 bg-gradient-to-r from-slate-900 via-purple-900/80 to-slate-900">
+export default function Footer() {
+  return (
+    <>
+      {/* <section className="mt-20 h-[300px]"> */}
+        {/*  */}
 
-  {/*  */}
-  
+        {/*  */}
 
-  {/*  */}
-  <div className="px-4 py-12">
-    <div className="max-w-7xl mx-auto 
-    bg-white/10 backdrop-blur-xl 
-    border border-white/20 
-    rounded-3xl shadow-2xl p-8">
-
-      {/* *** */}
-      <div className="flex flex-col md:flex-row justify-between gap-10">
-
-        {/* BRAND */}
-        <div className="flex flex-col gap-3 max-w-sm">
-          <h2 className="text-3xl font-bold text-white tracking-wide">
-            E-commerce
-          </h2>
-
-          <p className="text-gray-300 text-sm leading-relaxed">
-            Discover premium products with seamless shopping experience.
-          </p>
-
-          {/* SOCIAL */}
-          <div className="flex gap-3 mt-2">
-            {["F", "T", "I"].map((val, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 flex items-center justify-center 
-                rounded-xl bg-white/20 text-white 
-                hover:bg-purple-600 transition cursor-pointer"
-              >
-                {val}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* LINKS */}
-        <div className="flex gap-12 text-sm">
-          <div className="flex flex-col gap-2">
-            <p className="text-white font-semibold mb-2">Company</p>
-            <a className="text-gray-300 hover:text-white transition">Home</a>
-            <a className="text-gray-300 hover:text-white transition">About</a>
-            <a className="text-gray-300 hover:text-white transition">Services</a>
+        {/* <div className="relative overflow-hidden max-w-7xl mx-auto h-full bg-white flex justify-between">
+          <div className="absolute bottom-0 right-0 w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className="w-full h-full"
+            >
+              <path
+                fill="#6555DF"
+                fill-opacity="1"
+                d="M0,320L34.3,298.7C68.6,277,137,235,206,192C274.3,149,343,107,411,80C480,53,549,43,617,58.7C685.7,75,754,117,823,160C891.4,203,960,245,1029,240C1097.1,235,1166,181,1234,186.7C1302.9,192,1371,256,1406,288L1440,320L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+              ></path>
+            </svg>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <p className="text-white font-semibold mb-2">Support</p>
-            <a className="text-gray-300 hover:text-white transition">Contact</a>
-            <a className="text-gray-300 hover:text-white transition">Help</a>
-            <a className="text-gray-300 hover:text-white transition">Privacy</a>
-          </div>
-        </div>
-      </div>
-
-      {/* **** */}
-      <div className="my-6 border-t border-white/20" />
-
-      {/* ***/}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-gray-300">
-        <p>© 2026 E-commerce. All rights reserved.</p>
-        <p className="text-xs opacity-70">
-          Designed with modern UI
-        </p>
-      </div>
-
-    </div>
-  </div>
-
-
-
-  
-</section>
-
-    </>)
+          <div className="px-4  w-full"></div>
+        </div> */}
+      {/* </section> */}
+    </>
+  );
 }

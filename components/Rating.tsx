@@ -21,6 +21,6 @@ while(starRating.length<5){
     
     {rating && <p className="flex items-center mt-2">{starRating}</p>}
   
-    {rating}
+   
     </>)
 }

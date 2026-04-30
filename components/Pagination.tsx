@@ -4,6 +4,10 @@ import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
+
 export default function Pagination({totalProducts,limit}){
 const router =useRouter();
 const params= useSearchParams();
@@ -24,21 +28,21 @@ router.push(`${pathname}?${query.toString()}`)
 console.log(totalpages);
     return(<>
    
-<div className="flex items-center justify-end gap-2 mt-10">
+<div className="flex items-center justify-center gap-2 py-10">
 
   {/* PREVIOUS */}
   <button
     onClick={() => applyPagination(page - 1)}
     disabled={page === 1}
     className="flex items-center gap-2 px-4 py-2 rounded-full 
-     border border-gray-200/60 
-    text-gray-700 text-sm font-medium cursor-pointer
-    hover:bg-purple-600 hover:text-white 
+     border-2 border-gray-200/60 
+    text-gray-700 text-md font-medium cursor-pointer
+    hover:bg-primary hover:text-white 
     disabled:opacity-40 disabled:cursor-not-allowed
     transition-all duration-300"
   >
-    <FaArrowLeft className="text-sm" />
-    Prev
+   
+  <MdOutlineKeyboardArrowLeft/>
   </button>
 
   {/* PAGE NUMBERS */}
@@ -51,7 +55,7 @@ console.log(totalpages);
         rounded-full text-sm font-medium transition-all duration-300 cursor-pointer
         ${
           page === val
-            ? "bg-purple-600 text-white shadow-md"
+            ? "bg-primary text-white shadow-md"
             : " border border-gray-200/60 text-gray-700 hover:bg-purple-200"
         }`}
       >
@@ -66,13 +70,12 @@ console.log(totalpages);
     disabled={page === totalpages}
     className="flex items-center gap-2 px-4 py-2 rounded-full 
      border border-gray-200/60 
-    text-gray-700 text-sm font-medium
+    text-gray-700 text-md font-medium
     hover:bg-purple-600 hover:text-white 
     disabled:opacity-40 disabled:cursor-not-allowed
     transition-all duration-300 cursor-pointer"
   >
-    Next
-    <FaArrowRight className="text-sm" />
+   <MdOutlineKeyboardArrowRight />
   </button>
 </div>
     </>)

@@ -2,10 +2,13 @@
 import { MdOutlineCancelPresentation } from "react-icons/md";
 import { IoIosMenu } from "react-icons/io";
 import Link from "next/link";
-import ThemeToggler from "../themes/ThemeToogler";
+// import ThemeToggler from "../themes/ThemeToogler";
 import { useState } from "react";
 import { useCartContext } from "./cartcontext/CartProvider";
 import { CiShoppingCart } from "react-icons/ci";
+import logo from "./logo.png"
+import Image from "next/image";
+
 export const limit = 10;
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -14,53 +17,69 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 
-bg-white/60 backdrop-blur-lg 
-border-b border-white/30 shadow-sm h-[70px]">
+ h-[70px]">
 
-        <div className="mx-auto max-w-7xl  flex items-center justify-between px-2 md:px-4 py-2">
+        <div className="mx-auto max-w-7xl  flex items-center justify-between px-2 md:px-4 py-2 bg-white/20 backdrop-blur-2xl ">
           <Link
             href={""}
             className="text-xl font-bold tracking-wide text-purple-600 md:text-2xl"
           >
-            Logo
+            
+           <Image src={logo} width={30} height={30} alt="logo_img" />
+
+    
+         {/* <img src={"./logo.svg"} /> */}
+   
           </Link>
 
           {/* links */}
           <div className="hidden lg:flex items-center gap-8">
             <Link
               href={"/"}
-              className="text-base font-medium md:text-xl text-gray-800 hover:text-purple-600 transition"
+              className="text-base font-medium md:text-md text-primary hover:text-indigo-400  transition hover:underline decoration-2 decoration-primary underline-offset-4"
             >
               Home
             </Link>
             {/*  */}
             <Link
+              href={`/aboutus`}
+              className="text-base font-medium md:text-md text-primary hover:text-indigo-400  transition hover:underline decoration-2 decoration-primary underline-offset-4"
+            >
+              About us
+            </Link>
+            <Link
               href={`/products?page=1&limit=10`}
-              className="text-base font-medium md:text-xl text-gray-800 hover:text-purple-600 transition"
+              className="text-base font-medium md:text-md text-primary hover:text-indigo-400  transition hover:underline decoration-2 decoration-primary underline-offset-4"
+            >
+              Services
+            </Link>
+
+
+
+            <Link
+              href={`/products?page=1&limit=10`}
+              className="text-base font-medium md:text-md text-primary hover:text-indigo-400  transition hover:underline decoration-2 decoration-primary underline-offset-4"
             >
               Products
             </Link>
-            {/*  */}
-            {/*  */}
-            <div className="flex items-center gap-2 relative">
-              <Link
-                href={"/cart"}
-                className="text-base font-medium md:text-xl text-gray-800 hover:text-purple-600 transition "
-              >
-                Cart
-              </Link>
-              <CiShoppingCart className="text-2xl relative" />
-              <span className="absolute bottom-4 w-5 h-5 rounded-full text-white font-medium bg-secondary  left-16 flex justify-center items-center text-sm py-2 px-2">
+           
+          </div>
+
+          {/* action */}
+          <div className="flex items-center  gap-6">
+            <div className="relative">
+
+                <Link href={"/cart"}>
+              <CiShoppingCart className="text-3xl text-primary" />
+               </Link>
+
+              <span className="absolute bottom-4 left-6  w-5 h-5 rounded-full text-white font-medium bg-primary  flex justify-center items-center text-sm py-2 px-2">
                 {cartItems.length}
               </span>
-            </div>
+             
+</div>
 
-            {/*  */}
-          </div>
-          {/* action */}
-          <div className="flex items-center">
-            {/* <ThemeToggler /> */}
-            <button className="hidden md:block px-4 py-2 bg-primary text-white font-medium rounded-full w-40">
+            <button className="hidden md:block px-4 py-2 bg-secondary text-gray-800 font-medium  text-md  rounded-md">
               Sign Up
             </button>
 

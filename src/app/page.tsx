@@ -1,201 +1,275 @@
-import img from "../../components/hero.jpg";
-import Image from "next/image";
 import Card from "../../components/Card";
 import Link from "next/link";
-import stickerImg from "../../components/handbag.png";
-import sneakerImg from "../../components/sneaker.png";
-import bootsImg from "../../components/boots.png";
-import { CiDeliveryTruck } from "react-icons/ci";
-import { MdOutlineWorkspacePremium } from "react-icons/md";
-import { RiSecurePaymentFill } from "react-icons/ri";
-import { MdOutlineSupportAgent } from "react-icons/md";
-import thinkingImg from "../../components/thinking.png"
-import truckImg from "../../components/truck.png";
-import fastDeliveryImg from "../../components/express-delivery.png"
-import shieldImg from "../../components/shield.png";
+import Img from "../../components/hero.png";
+import Img2 from "../../components/hero2.png";
+import Img3 from "../../components/hero3.png";
+import Img4 from "../../components/hero4.png";
+import Image  from "next/image";
 import { FaEye } from "react-icons/fa6";
+import categoryImg from "../../components/categoryImg.png";
+import categoryImg2 from "../../components/categoryImg2.jpg";
+import categoryImg3 from "../../components/categoryImg3.png";
+import categoryImg4 from "../../components/categoryImg4.png";
+import categoryImg5 from "../../components/categoryImg5.png";
+import GroupImg1 from "../../components/GroupImg1.png";
+import GroupImg2 from "../../components/GroupImg2.png";
+import GroupImg3 from "../../components/GroupImg3.png";
 
-// import { limit } from "../../components/Navbar";
-export  default async function Home() {
 
-const res= await fetch("http://localhost:3000/api/products");
-const result =await res.json();
+import CategoryCard from "../../components/CategoryCard";
+import { URL } from "url";
+export default async function Home() {
+  const res = await fetch("http://localhost:3000/api/products");
+  const result = await res.json();
 
-const data= result.products.slice(4,8);
-
+  const data = result.products.slice(4, 8);
 
   return (
     <>
-      <main className="py-8 bg-gradient-to-br from-slate-100 via-purple-50 to-slate-200">
-    
-        <div className="max-w-7xl mx-auto">
-         
-          <div className="grid lg:grid-cols-2 items-center  p-4 rounded-xl">
-            <div className="flex flex-col  gap-8 py-8">
-              <div className="flex justify-center">
-                <div className="bg-amber-400 h-20 w-20 rounded-full flex justify-center items-center flex-col -rotate-4 ">
-                  <p className="text-sm font-bold -skew-4">Exclusive</p>
-                  <p className="text-sm  font-bold -skew-4">offers</p>
-                </div>
-              </div>
-              {/* ********** */}
+      <section className="mt-15 overflow-hidden">
+        <div className="relative  max-w-7xl  mx-auto min-h-screen bg-linear-to-r from-primary to-primary/50  flex lg:h-screen flex flex-col lg:flex-row">
+          {/* *** */}
+          {/* circle */}
+          <div className="absolute -top-12 left-4 h-30 w-30 rounded-full bg-white/50"></div>
+ {/* ********************** */}
+ 
 
-              <h1 className="text-text text-2xl font-medium">
-                Purchase with pleasure
-              </h1>
-              <h1 className="text-secondary font-bold text-6xl">
-                Shopping is easy from your app
-              </h1>
+          <div className="absolute bottom-0 left-0 w-full  z-0">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className="w-full h-full"
+            >
+              <path
+                fill="white"
+                fillOpacity="1"
+                d="M0,320L34.3,298.7C68.6,277,137,235,206,192C274.3,149,343,107,411,80C480,53,549,43,617,58.7C685.7,75,754,117,823,160C891.4,203,960,245,1029,240C1097.1,235,1166,181,1234,186.7C1302.9,192,1371,256,1406,288L1440,320L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
 
-              <p className="text-text text-base tracking-wide">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab
-                sapiente voluptas inventore doloribus a illo sed reprehenderit
-                corporis amet itaque.
-              </p>
+{/* ******************************************* */}
 
-              <button className="px-4 py-2 bg-primary text-white font-medium w-30">
-                Shop now
-              </button>
-
-              {/* badges */}
-
-              <div className="bg-amber-400 transform -skew-3 py-2 -rotate-2">
-                <span className="flex text-xl font-bold justify-center">
-                  20% disscount
-                </span>
-              </div>
-            </div>
+          <div className="grid grid-cols-12  w-full h-full relative z-10">
             {/*  */}
-            <div className="flex justify-center  py-4 relative">
-              <div className="">
-                <Image
-                  src={img}
-                  width={500}
-                  priority
-                  height={600}
-                  alt="hero-img"
-                />
-              </div>
+            <div className="col-span-12 gap-8  md:col-span-6 z-10 flex flex-col md:gap-3 lg:gap-4  px-8 py-30">
+              <p className="text-3xl md:text-4xl lg:text-6xl font-bold text-white  lg:max-w-lg">
+                Elevate Your <span className="font-medium">Everyday Style</span>
+              </p>
+              <p className="text-lg font-lighter text-white">
+                Quality products delivered to your door.
+              </p>
+              <Link
+                href={`/products?page=1&limit=10`}
+                className="bg-white rounded-md px-8 py-2 cursor-pointer w-40"
+              >
+                Shop Now
+              </Link>
+            </div>
 
-              {/*  */}
-              <div className="absolute top-5 left-0 -rotate-12">
+            {/* {*********2nd col******** */}
+            <div className="col-span-12 md:col-span-6 flex items-center justify-center relative min-h-[400px] md:min-h-full">
+              {/* *********************** */}
+              <div className="relative  h-full w-full flex items-start md:items-center justify-center">
                 <Image
-                  src={stickerImg}
-                  width={60}
-                  height={60}
-                  alt="sticker-img"
+                  alt="hero_img"
+                  src={Img}
+                  width={400}
+                  height={400}
+                  className="z-20 w-[300px] md:w-[250px] md:absolute  md:top-1/4 md:right-1/6 lg:w-[300px] lg:right-1/4 lg:top-1/4"
                 />
-              </div>
-              <div className="absolute bottom-10 left-0 -rotate-45">
-                <Image
-                  src={sneakerImg}
-                  width={60}
-                  height={60}
-                  className="object-cover"
-                  alt="sticker-img"
-                />
-              </div>
-              {/*  */}
-              <div className="absolute top-50 right-0 -rotate-45">
-                <Image
-                  src={bootsImg}
-                  width={60}
-                  height={60}
-                  className="object-cover"
-                  alt="sticker-img"
-                />
-              </div>
+              
+
+              {/* ********truck************************* */}
+
+              <Image
+                alt="hero_img"
+                src={Img4}
+                
+                className="hidden md:block md:absolute md:top-6 md:right-1/4 md:w-40    lg:top-2 lg:right-1/3 lg:w-50  opacity-90"
+              />
+
+              {/* ************telephone********************* */}
+
+              <Image
+                alt="hero_img"
+                src={Img3}
+                
+                className="hidden md:block md:w-40  md:absolute top-1/4 left-3 lg:w-50 opacity-80 xl:left-20"
+              />
+
+              {/* {***************earth*************************} */}
+
+              <Image
+                alt="hero_img"
+                src={Img2}
+                
+                className="hidden md:block md:absolute md:w-40  md:top-1/4 md:right-0  lg:w-50 lg:right-15   z-10"
+              />
+               </div>
+              {/* ******************************* */}
             </div>
           </div>
+          {/* ************* */}
+
+          {/* ************************** */}
+
+          {/* circle */}
+
+          <div className="absolute h-30 w-30 rounded-full bg-white/50 bottom-50 -right-12 opacity-80"></div>
+
+          {/* **** */}
         </div>
-      </main>
+      </section>
 
-      
-
-          
       {/* features */}
-      <section className="">
-        <div className="mx-auto max-w-7xl py-4">
-<div className="flex justify-between">
-          <p className="text-lg text-purple-600 font-medium">Branded Deals</p>
-          <Link href={`/products?page=1&limit=10`}  className="text-purple-600 text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-purple-600   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"><FaEye/>   View more</Link>
-         </div>
-
+      <section className="py-8  px-6">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex justify-between py-2">
+            <p className="text-2xl text-purple-600 font-medium">
+              Grab the best deal
+            </p>
+            <Link
+              href={`/products?page=1&limit=10`}
+              className="text-purple-600 text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-purple-600   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
+            >
+              <FaEye /> View more
+            </Link>
+          </div>
+          <hr className="text-gray-200/60" />
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 py-8">
-            {data.map(
-              (val) => (
-                <Card key={val.id} product={val} />
-              ),
-            )}
+            {data.map((val) => (
+              <Card key={val.id} product={val} />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* service section */}
-      <section className="py-6">
-        <div className="max-w-7xl mx-auto py-6">
-          <div className="grid grid-cols-2">
-              
-            <div className="flex flex-col gap-4">
-        <div className="flex flex-col">
-          
-          <span className="text-6xl font-bold text-secondary mb-6 -skew-2">Why choosing Us ? </span>
+      {/* *******top categories */}
 
-          <div className="flex justify-center">
-          <Image src={thinkingImg} alt="sticker_img" width={40} height={40} className="opacity-50"/>   
-         </div>
-
+      <section className="py-6 px-2">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex justify-between items-center py-4">
+            <p className="text-2xl text-purple-600 font-medium">
+              Shop From Top Categories
+            </p>
+            <Link
+              href={`/products?page=1&limit=10`}
+              className="text-purple-600 text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-purple-600   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
+            >
+              <FaEye /> View more
+            </Link>
           </div>
-<div className="flex flex-col gap-3">
-          <p className="bg-amber-400 w-50 py-2 ml-6 -skew-3 pl-4 text-lg font-medium text-text">Premium Quality</p>
-          <p className="bg-amber-400 w-70 py-2 ml-10 -skew-3 pl-4 text-lg font-medium text-text">fast delivery</p>
-          <p className="bg-amber-400 w-90 py-2 ml-14 -skew-3 pl-4 text-lg font-medium text-text">Secure payment</p>
-          <p className="bg-amber-400 w-110 py-2 ml-18 -skew-3 pl-4 text-lg font-medium text-text">24/7 Expert Support</p>
-          <p className="bg-amber-400 w-50 py-2 ml-50 -skew-3 pl-4 text-lg font-medium text-text">Easy to return</p>
-</div>
-{/* ****stickers**** */}
-<div className="relative">
-<Image alt="truck_img" src={truckImg} width={60} height={60} className="absolute right-20 bottom-50 -rotate-10 opacity-50"/>
-</div>
-
+          <hr className="text-gray-200/60" />
 
           {/*  */}
-          </div>
-{/* ******************** */}
-<div className="flex flex-col gap-6 py-4">
-<div className="flex gap-4 -skew-2">
-<div className="border-2 border-gray-300 w-40 h-40 flex justify-center items-center"><CiDeliveryTruck className="text-6xl  text-secondary"/></div>
-{/*  */}
-
-<div className="border-2 border-gray-300  w-40 h-40 flex justify-center items-center"><MdOutlineWorkspacePremium className="text-6xl text-secondary"/></div>
-{/*  */}
-</div>
-
-<div className="flex gap-4 -skew-2">
-<div className="border-2 border-gray-300 w-40 h-40 flex justify-center items-center"><RiSecurePaymentFill className="text-6xl text-secondary"/></div>
-{/*  */}
-<div className="border-2 border-gray-300 w-40 h-40 flex justify-center items-center"><MdOutlineSupportAgent className="text-6xl text-secondary"/></div>
-{/*  */}
-</div>
-<div className="relative">
-<Image alt="fast_delivery" src={fastDeliveryImg} width={60} height={60} className="absolute right-30 bottom-70 -rotate-10 opacity-50"/>
-</div>
-<div className="relative">
-<Image src={shieldImg} width={60} height={60} className="absolute right-20 bottom-20 -rotate-10 opacity-50"/>
-</div>
-{/*  */}
-
-
-</div>
-
-
+          <div className="flex items-center justify-around py-2">
+            {[
+              { text: "Watches", img: categoryImg },
+              { text: "Laptop", img: categoryImg },
+              { text: "Jwellery", img: categoryImg },
+              { text: "Fashion", img: categoryImg },
+              { text: "Games", img: categoryImg },
+            ].map((val, i) => (
+              <CategoryCard key={i} value={val} />
+            ))}
           </div>
 
-
-
+          {/*  */}
+          <div className="flex justify-between items-center  py-4 px-6">
+            <p className="text-2xl text-purple-600 font-medium">
+              Shop From Top Categories
+            </p>
+            <Link
+              href={`/products?page=1&limit=10`}
+              className="text-purple-600 text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-purple-600   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
+            >
+              <FaEye /> View more
+            </Link>
+          </div>
+          <hr className="text-gray-200/60" />
         </div>
-   </section>
+        {/* ******************** */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid   md:grid-cols-3 justify-around py-4 gap-4">
+            <Image src={GroupImg1} width={400} height={500} alt="group_img" />
+            <Image src={GroupImg2} width={400} height={500} alt="group_img" />
+            <Image src={GroupImg3} width={400} height={500} alt="group_img" />
+          </div>
+        </div>
+      </section>
+
+{/* ***Our */}
+
+<section className="">
+        <div className="relative max-w-7xl mx-auto  h-125 bg-cover bg-center" style={{backgroundImage:"url('/servicesBg.svg')"}}>
+          {/* *** */}
+          {/* circle */}
+ <div className="flex flex-col gap-6 items-center py-20">
+
+<p className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mt-10"> Shop With Total Confidence</p>
+<p className="text-lg font-lighter text-white text-center max-w-xl">From secure payments to lightning-fast delivery, we’ve built a shopping experience that puts your needs first.</p>
+<Link
+                href={`/products?page=1&limit=10`}
+                className="bg-white rounded-md px-8 py-2 cursor-pointer w-40"
+              >
+                Shop Now
+              </Link>
+
+ </div>
+    
+{/* ************** */}
+<div className="absolute top-60 left-50">
+  <Image src ={"/sneaker.png"} width={50} height={50} className="opacity-90 -skew-6"  alt="shopping_mall"/>
+</div>
+
+<p className=" text-white text-2xl">Exclusive Offers</p>
+
+
+{/* ************* */}
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+      {/* trusted section */}
+
+
+
+
+
+
+
+
+{/* <section className="py-4">
+
+  <div className="max-w-7xl mx-auto">
+<div className="grid grid-cols-12 border">
+<div className="col-span-8 border">
+col-1
+</div>
+{/* ********************** */}
+{/* <div className="col-span-4 border">
+cols-2
+</div> */}
+
+{/* </div> */}
+
+  {/* </div> */}
+
+{/* // </section> */} 
+
+
+{/* ************footer*********** */}
+
     </>
   );
 }
