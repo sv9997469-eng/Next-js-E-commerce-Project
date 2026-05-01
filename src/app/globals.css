@@ -16,7 +16,13 @@
   --color-muted: rgb(0,0,0,0.5);
   --color-secondary:rgb(226, 232, 240);
   /* font */
-  --font-nz-guides:"Playwrite NZ Guides",cursive
+  --font-nz-guides:"Playwrite NZ Guides",cursive;
+/* colors */
+ --background-image-slice-gradient:conic-gradient(white 0% 19%, orange 19% 20%,white 20% 39%,green 39% 40%, white 40% 59%,red 59% 60%, white 60% 79%, blue 79% 80%,white 80% 99%, pink 99% 100%);
+
+
+
+
 
 }
 

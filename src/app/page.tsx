@@ -4,8 +4,10 @@ import Img from "../../components/hero.png";
 import Img2 from "../../components/hero2.png";
 import Img3 from "../../components/hero3.png";
 import Img4 from "../../components/hero4.png";
-import Image  from "next/image";
+import Image from "next/image";
 import { FaEye } from "react-icons/fa6";
+import { FaShopLock } from "react-icons/fa6";
+
 import categoryImg from "../../components/categoryImg.png";
 import categoryImg2 from "../../components/categoryImg2.jpg";
 import categoryImg3 from "../../components/categoryImg3.png";
@@ -14,7 +16,6 @@ import categoryImg5 from "../../components/categoryImg5.png";
 import GroupImg1 from "../../components/GroupImg1.png";
 import GroupImg2 from "../../components/GroupImg2.png";
 import GroupImg3 from "../../components/GroupImg3.png";
-
 
 import CategoryCard from "../../components/CategoryCard";
 import { URL } from "url";
@@ -27,12 +28,11 @@ export default async function Home() {
   return (
     <>
       <section className="mt-15 overflow-hidden">
-        <div className="relative  max-w-7xl  mx-auto min-h-screen bg-linear-to-r from-primary to-primary/50  flex lg:h-screen flex flex-col lg:flex-row">
+        <div className="relative  max-w-7xl  mx-auto min-h-screen bg-linear-to-r from-primary to-primary/30  flex lg:h-screen flex-col lg:flex-row rounded-lg">
           {/* *** */}
           {/* circle */}
           <div className="absolute -top-12 left-4 h-30 w-30 rounded-full bg-white/50"></div>
- {/* ********************** */}
- 
+          {/* ********************** */}
 
           <div className="absolute bottom-0 left-0 w-full  z-0">
             <svg
@@ -48,7 +48,7 @@ export default async function Home() {
             </svg>
           </div>
 
-{/* ******************************************* */}
+          {/* ******************************************* */}
 
           <div className="grid grid-cols-12  w-full h-full relative z-10">
             {/*  */}
@@ -61,9 +61,9 @@ export default async function Home() {
               </p>
               <Link
                 href={`/products?page=1&limit=10`}
-                className="bg-white rounded-md px-8 py-2 cursor-pointer w-40"
+                className="bg-white rounded-md py-2 cursor-pointer hover:bg-white/80     w-40 flex gap-4 items-center justify-center text-xl"
               >
-                Shop Now
+                Shop Now <FaShopLock />
               </Link>
             </div>
 
@@ -78,35 +78,31 @@ export default async function Home() {
                   height={400}
                   className="z-20 w-[300px] md:w-[250px] md:absolute  md:top-1/4 md:right-1/6 lg:w-[300px] lg:right-1/4 lg:top-1/4"
                 />
-              
 
-              {/* ********truck************************* */}
+                {/* ********truck************************* */}
 
-              <Image
-                alt="hero_img"
-                src={Img4}
-                
-                className="hidden md:block md:absolute md:top-6 md:right-1/4 md:w-40    lg:top-2 lg:right-1/3 lg:w-50  opacity-90"
-              />
+                <Image
+                  alt="hero_img"
+                  src={Img4}
+                  className="hidden md:block md:absolute md:top-6 md:right-1/4 md:w-40    lg:top-10 lg:right-1/3 lg:w-50  opacity-90"
+                />
 
-              {/* ************telephone********************* */}
+                {/* ************telephone********************* */}
 
-              <Image
-                alt="hero_img"
-                src={Img3}
-                
-                className="hidden md:block md:w-40  md:absolute top-1/4 left-3 lg:w-50 opacity-80 xl:left-20"
-              />
+                <Image
+                  alt="hero_img"
+                  src={Img3}
+                  className="hidden md:block md:w-40  md:absolute md:top-1/4 md:left-4 lg:w-60 lg:left-10  opacity-80 xl:left-20"
+                />
 
-              {/* {***************earth*************************} */}
+                {/* {***************earth*************************} */}
 
-              <Image
-                alt="hero_img"
-                src={Img2}
-                
-                className="hidden md:block md:absolute md:w-40  md:top-1/4 md:right-0  lg:w-50 lg:right-15   z-10"
-              />
-               </div>
+                <Image
+                  alt="hero_img"
+                  src={Img2}
+                  className="hidden md:block md:absolute md:w-40  md:top-1/4 md:right-0  lg:w-60 lg:right-15   z-10"
+                />
+              </div>
               {/* ******************************* */}
             </div>
           </div>
@@ -126,12 +122,12 @@ export default async function Home() {
       <section className="py-8  px-6">
         <div className="mx-auto max-w-7xl">
           <div className="flex justify-between py-2">
-            <p className="text-2xl text-purple-600 font-medium">
+            <p className="text-2xl text-primary font-medium">
               Grab the best deal
             </p>
             <Link
               href={`/products?page=1&limit=10`}
-              className="text-purple-600 text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-purple-600   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
+              className="text-primary text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-primary   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
             >
               <FaEye /> View more
             </Link>
@@ -151,12 +147,12 @@ export default async function Home() {
       <section className="py-6 px-2">
         <div className="mx-auto max-w-7xl">
           <div className="flex justify-between items-center py-4">
-            <p className="text-2xl text-purple-600 font-medium">
+            <p className="text-2xl text-primary font-medium">
               Shop From Top Categories
             </p>
             <Link
               href={`/products?page=1&limit=10`}
-              className="text-purple-600 text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-purple-600   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
+              className="text-primary text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-primary   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
             >
               <FaEye /> View more
             </Link>
@@ -177,13 +173,13 @@ export default async function Home() {
           </div>
 
           {/*  */}
-          <div className="flex justify-between items-center  py-4 px-6">
-            <p className="text-2xl text-purple-600 font-medium">
+          <div className="flex justify-between items-center  py-4 px-4">
+            <p className="text-2xl text-primary font-medium">
               Shop From Top Categories
             </p>
             <Link
               href={`/products?page=1&limit=10`}
-              className="text-purple-600 text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-purple-600   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
+              className="text-primary text-sm font-medium hover:underline underline-offset-4 decoration-2 decoration-primary   cursor-pointer flex items-center gap-2 border-2 px-4 py-2 rounded-md"
             >
               <FaEye /> View more
             </Link>
@@ -200,76 +196,132 @@ export default async function Home() {
         </div>
       </section>
 
-{/* ***Our */}
+      {/* ***Our */}
 
-<section className="">
-        <div className="relative max-w-7xl mx-auto  h-125 bg-cover bg-center" style={{backgroundImage:"url('/servicesBg.svg')"}}>
+      <section className="">
+        <div
+          className="relative max-w-7xl mx-auto  h-125 bg-cover bg-center rounded-lg"
+          style={{ backgroundImage: "url('/servicesBg.svg')" }}
+        >
           {/* *** */}
-          {/* circle */}
- <div className="flex flex-col gap-6 items-center py-20">
+          {/* text */}
+          <div className="flex flex-col  px-4 py-10  gap-6 items-start md:items-center md:py-20 z-500">
+            <p className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mt-10">
+              {" "}
+              Shop With Total Confidence
+            </p>
+            <p className="text-lg max-w-xl  font-lighter text-white md:text-center">
+              From secure payments to lightning-fast delivery, we’ve built a
+              shopping experience that puts your needs first.
+            </p>
+            <Link
+              href={`/products?page=1&limit=10`}
+              className="bg-white rounded-md py-2 cursor-pointer hover:bg-white/80     w-40 flex gap-4 items-center justify-center text-xl"
+            >
+              Shop Now <FaShopLock />
+            </Link>
+          </div>
 
-<p className="text-3xl md:text-4xl lg:text-6xl font-bold text-white mt-10"> Shop With Total Confidence</p>
-<p className="text-lg font-lighter text-white text-center max-w-xl">From secure payments to lightning-fast delivery, we’ve built a shopping experience that puts your needs first.</p>
-<Link
-                href={`/products?page=1&limit=10`}
-                className="bg-white rounded-md px-8 py-2 cursor-pointer w-40"
-              >
-                Shop Now
-              </Link>
+          {/* *********circle***** */}
 
- </div>
-    
+          <div className="absolute top-0 left-0 h-30 w-30 rounded-full bg-white/50 opacity-50"></div>
+
+{/* circle */}
+          <div className="absolute bg-white/50 opacity-50     top-1/4 left-1/2 w-30 h-30 md:top-1/3 md:left-0   md:w-64 md:h-64 rounded-full "></div>
+
+          <Image
+            src={"/serviceImg.png"}
+            width={80}
+            height={80}
+            alt="shopping_img"
+            className="hidden  md:block -rotate-30  md:absolute md:right-1/5  md:top-1/2 md:w-30 md:h-30 lg:w-40 lg:h-40 lg:right-1/6  object-cover "
+          />
+
+          {/* ************* */}
+        
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+      </section>
+
+      {/* benefits*/}
+<section className="py-4">
+    <div className="relative max-w-7xl mx-auto  h-125 bg-cover bg-center">
+
+   <div className="absolute w-80 h-80 rounded-full bg-primary/10 opacity-
+   30">
+   
+   <div className="w-40 h-40 rounded-full bg-primary/10 opacity-30"></div>
+
+  
+
+
+   </div>
+
+
+
+      <div className="grid grid-cols-12 justify-center   mt-20">
+
+<div className="col-span-8 py-14 flex flex-col leading-3 relative">
+
+{/* text */}
+<p className="text-5xl text-primary font-bold">Why choosing us ?</p>
+
+<p className="text-xl text-primary max-w-lg leading-8 mt-4">Most trusted E-commerce  Website <span>Trusted by</span> <span className="text-4xl font-bold flex">10000 + customers</span> </p>
 {/* ************** */}
-<div className="absolute top-60 left-50">
-  <Image src ={"/sneaker.png"} width={50} height={50} className="opacity-90 -skew-6"  alt="shopping_mall"/>
+
+{/* benefits */}
+<div className="w-full flex gap-4 justify-center mt-5">
+
+
+<ul className="pl-30 flex flex-col gap-4">
+<li className="text-primary font-semibold font-nz-guides text-2xl pl-4">Secure Payment</li>
+<li className="text-primary font-semibold font-nz-guides text-2xl pl-8">Fast Deilvery</li>
+<li className="text-primary font-semibold font-nz-guides text-2xl pl-12">Easy Return</li>
+<li className="text-primary font-semibold font-nz-guides text-2xl pl-16">Refundable Products</li>
+</ul>
+
+
+
+
+
 </div>
 
-<p className=" text-white text-2xl">Exclusive Offers</p>
+ <div className="absolute left-1/2 w-100 h-100 rounded-full bg-primary/10 opacity-30 flex items-center justify-center">
+ <div className="w-40 h-40 rounded-full bg-primary/10 opacity-90"></div>
+ 
+ </div>
+{/* ************************* */}
+
+ 
+
+</div>
+{/* ************************** */}
+
+<div className="col-span-4 relative">
+
+<div className="absolute bg-primary/20 h-80 w-80 rounded-full opacity-10"></div>
+<div className="absolute bg-primary/20 h-40 w-40 rounded-full opacity-10"></div>
 
 
-{/* ************* */}
-
-
+<Image src={"/shoppingstore.png"} width={900} height={900} alt="store_img" className="z-50"/>
 
 </div>
 
+
+</div>
+    </div>
 </section>
-
-
-
-
-
-
-      {/* trusted section */}
-
-
-
-
-
-
-
-
-{/* <section className="py-4">
-
-  <div className="max-w-7xl mx-auto">
-<div className="grid grid-cols-12 border">
-<div className="col-span-8 border">
-col-1
-</div>
-{/* ********************** */}
-{/* <div className="col-span-4 border">
-cols-2
-</div> */}
-
-{/* </div> */}
-
-  {/* </div> */}
-
-{/* // </section> */} 
-
-
-{/* ************footer*********** */}
-
+      {/* ************footer*********** */}
     </>
   );
 }

@@ -1,5 +1,5 @@
 import stickerImg from "../../../components/handbag.png";
-import sneakerImg from "../../../components/sneaker.png";
+
 import bootsImg from "../../../components/boots.png";
 // import { CiDeliveryTruck } from "react-icons/ci";
 // import { MdOutlineWorkspacePremium } from "react-icons/md";
@@ -77,7 +77,7 @@ export default function Aboutus(){
                   </div>
                   <div className="absolute bottom-10 left-0 -rotate-45">
                     <Image
-                      src={sneakerImg}
+                      src={"/sneaker.png"}
                       width={60}
                       height={60}
                       className="object-cover"
