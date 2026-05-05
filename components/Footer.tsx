@@ -1,29 +1,68 @@
 export default function Footer() {
   return (
     <>
-      {/* <section className="mt-20 h-[300px]"> */}
-        {/*  */}
+  
+<section style={{backgroundImage:"url('/footerbg.svg')"}} className="bg-cover bg-center min-h-[350px] px-8 mt-4">
+  <div className="max-w-7xl mx-auto bg-white/20 backdrop-blur-xl h-full rounded-xl">
 
-        {/*  */}
+<div className="flex items-center justify-between p-6">
+   <div className="">
+      <h2 className="text-white text-2xl font-bold mb-3">E-Mart</h2>
+      <p className="text-sm text-primary">
+       Grab best deals at afforable price.
+      </p>
+    </div>
 
-        {/* <div className="relative overflow-hidden max-w-7xl mx-auto h-full bg-white flex justify-between">
-          <div className="absolute bottom-0 right-0 w-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1440 320"
-              className="w-full h-full"
-            >
-              <path
-                fill="#6555DF"
-                fill-opacity="1"
-                d="M0,320L34.3,298.7C68.6,277,137,235,206,192C274.3,149,343,107,411,80C480,53,549,43,617,58.7C685.7,75,754,117,823,160C891.4,203,960,245,1029,240C1097.1,235,1166,181,1234,186.7C1302.9,192,1371,256,1406,288L1440,320L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
+    {/* Links */}
+    <div>
+      <h3 className="text-white font-semibold mb-3">Quick Links</h3>
+      <ul className="space-y-2 text-sm">
+        <li><a href="#" className="text-white hover:text-primary">Home</a></li>
+        <li><a href="#" className="text-white hover:text-primary">About</a></li>
+        <li><a href="#" className="text-white hover:text-primary">Services</a></li>
+        <li><a href="#" className="text-white hover:text-primary">Contact</a></li>
+      </ul>
+    </div>
 
-          <div className="px-4  w-full"></div>
-        </div> */}
-      {/* </section> */}
+    {/* Resources */}
+    <div>
+      <h3 className="text-white font-semibold mb-3">Resources</h3>
+      <ul className="space-y-2 text-sm">
+        <li><a href="#" className="text-white hover:text-primary">Blog</a></li>
+        <li><a href="#" className="text-white hover:text-primary">Help Center</a></li>
+        <li><a href="#" className="text-white hover:text-primary">Privacy Policy</a></li>
+        <li><a href="#" className="text-white hover:text-primary">Terms</a></li>
+      </ul>
+    </div>
+
+    {/* Newsletter */}
+    <div>
+      <h3 className="text-white font-semibold mb-3">Subscribe</h3>
+      <p className="text-sm mb-3 text-primary">Get latest updates and offers.</p>
+      <input
+        type="email"
+        placeholder="Enter your email"
+        className="w-full px-3 py-2 rounded bg-white hover:bg-white/50 focus:bg-white    text-sm outline-none"
+      />
+      <button className="mt-3 w-full bg-primary text-white py-2 rounded hover:opacity-90 cursor-pointer">
+        Subscribe
+      </button>
+    </div>
+
+  </div>
+
+  
+  <div className="border-t border-white mt-10 pt-6 text-center text-sm text-primary">
+    © {new Date().getFullYear()} YourBrand. All rights reserved.
+  </div>
+
+{/* ********************************** */}
+    </div>
+</section>
+
+
+
+
     </>
   );
 }

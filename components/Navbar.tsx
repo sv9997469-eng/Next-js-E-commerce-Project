@@ -17,15 +17,15 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 w-full z-50 
- h-[70px]">
+ h-[70px] bg-white/20 backdrop-blur-2xl">
 
-        <div className="mx-auto max-w-7xl  flex items-center justify-between px-2 md:px-4 py-2 bg-white/20 backdrop-blur-2xl ">
+        <div className="mx-auto max-w-7xl w-full  flex items-center justify-between px-2 md:px-4 py-2 ">
           <Link
             href={""}
-            className="text-xl font-bold tracking-wide text-purple-600 md:text-2xl"
+            className="text-xl font-bold tracking-wide text-primary md:text-2xl"
           >
             
-           <Image src={logo} width={30} height={30} alt="logo_img" />
+          E-MART
 
     
          {/* <img src={"./logo.svg"} /> */}
@@ -33,7 +33,7 @@ export default function Navbar() {
           </Link>
 
           {/* links */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8">
             <Link
               href={"/"}
               className="text-base font-medium md:text-md text-primary hover:text-indigo-400  transition hover:underline decoration-2 decoration-primary underline-offset-4"

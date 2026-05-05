@@ -2,26 +2,11 @@
 
 import useFilterHook from "./utils/CustomeHookforFilters";
 
-// import { applyFilter } from "./utils/applyFilters";
-// import { removeFilter } from "./utils/applyFilters";
-
-// import { Button } from "@/components/ui/button"
 export default function Filters() {
   const { applyFilter, selectedCategory, selectedSortingOrder, removeFilter } =
     useFilterHook();
 
-  // function applyFilter(key: string, value: string) {
-  //   const query = new URLSearchParams(params);
-  //   if (value === "All") {
-  //     query.delete(key);
-  //   } else {
-  //     query.set(key, value);
-  //   }
-  //   // page reseting pending //
-  //     query.set("page",1)
-  //     query.set("limit","10")
-  //   router.push(`${pathname}?${query.toString()}`);
-  // }
+  
 
   return (
     <>
@@ -76,47 +61,50 @@ export default function Filters() {
           <div className="my-6 border-t border-gray-200" />
 
           {/* PRICE */}
-          <section>
-            <p className="text-lg font-semibold text-white/80 mb-3">Price</p>
+          
+<section>
+  <p className="text-lg font-semibold text-white/80 mb-3">Price</p>
 
-            <div className="flex flex-col gap-2">
-              {["Low to High", "High to Low"].map((val, i) => (
-                <label
-                  key={i}
-                  className={`flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition
-            ${
-              selectedSortingOrder === val
-                ? "bg-gray-100 text-gray-700 shadow"
-                : "text-white/80"
-            }`}
-                >
-                  <span className="text-sm font-medium">{val}</span>
+  <div className="flex flex-col gap-2">
+    {["Low to High", "High to Low"].map((val, i) => (
+      <label
+        key={i}
+        className={`flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition
+        ${
+          selectedSortingOrder === val
+            ? "bg-gray-100 text-gray-700 shadow"
+            : "text-white/80"
+        }`}
+      >
+        <span className="text-sm font-medium">{val}</span>
 
-                  {/* custom radio */}
-                  <span
-                    className={`w-4 h-4 rounded-full border-2 flex items-center justify-center
-              ${
-                selectedSortingOrder === val
-                  ? "border-purple-600" : "text-white/80"
-              }`}
-                  >
-                    {selectedSortingOrder === val && (
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                    )}
-                  </span>
+        {/* custom radio */}
+        <span
+          className={`w-4 h-4 rounded-full border-2 flex items-center justify-center
+          ${
+            selectedSortingOrder === val
+              ? "border-purple-600"
+              : "text-white/80"
+          }`}
+        >
+          {selectedSortingOrder === val && (
+            <span className="w-2 h-2 bg-primary rounded-full"></span>
+          )}
+        </span>
 
-                  <input
-                    type="radio"
-                    name="price"
-                    value={val}
-                    checked={selectedSortingOrder === val}
-                    className="hidden"
-                  />
-                </label>
-              ))}
-            </div>
-          </section>
-
+        {/* ✅ IMPORTANT FIX */}
+        <input
+          type="radio"
+          name="price"
+          value={val}
+          checked={selectedSortingOrder === val}
+          onChange={(e) => applyFilter("sorting", e.target.value)}
+          className="hidden"
+        />
+      </label>
+    ))}
+  </div>
+</section>
           {/* CLEAR BUTTON */}
           <button
             onClick={removeFilter}

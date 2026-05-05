@@ -1,12 +1,28 @@
 "use client"
 import { CiSearch } from "react-icons/ci";
 import { CiHeart } from "react-icons/ci";
-
+import { useEffect, useState } from "react";
 // import DropdownMenuRadioGroupDemo from "./Sorting";
 import useFilterHook from "./utils/CustomeHookforFilters";
 export default function SearchAndSorting(){
 
-const {applyFilter,selectedSortingOrder}=useFilterHook()
+ const { applyFilter, searchedtext , selectedSortingOrder} = useFilterHook();
+ const [text,settext]=useState(searchedtext);
+const [sort,setsort]=useState();
+ useEffect(() => {
+    let timer=setTimeout(()=>{
+      applyFilter("search", text || "");
+    },500)
+
+return ()=>clearTimeout(timer)
+
+  }, [text]);
+
+useEffect(() => {
+  settext(searchedtext);
+}, [searchedtext]);
+
+
 
     return (<>
   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4  rounded-xl px-4">
@@ -15,10 +31,13 @@ const {applyFilter,selectedSortingOrder}=useFilterHook()
   <div className="relative w-full md:w-2/1 bg-linear-to-r from-primary to-gray-400 p-[2px] rounded-xl animate-pulse">
     <input
       type="search"
+      value={text}
+
       placeholder="Search here..."
       className="w-full pl-10 pr-2   rounded-xl 
       text-sm  text-slate-800 focus:outline-none py-3 bg-white
       "
+      onChange={(e)=>settext(e.target.value)}
     />
 
     <CiSearch className="absolute left-3 top-1/2 -translate-y-1/2  text-xl font-bold text-purple-600" />
@@ -41,6 +60,8 @@ const {applyFilter,selectedSortingOrder}=useFilterHook()
         text-sm text-gray-700 font-medium
         focus:outline-none focus:ring-2 focus:ring-purple-400
         shadow-sm cursor-pointer hover:bg-purple-100"
+     value={selectedSortingOrder}
+  onChange={(e) => applyFilter("sorting", e.target.value)}
      >
      
         <option value="A-Z">A - Z</option>

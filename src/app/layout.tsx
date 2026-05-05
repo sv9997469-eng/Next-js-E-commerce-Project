@@ -27,13 +27,13 @@ export default function RootLayout({
     >
       {/* bg-gradient-to-r from-purple-300 to-gray-200 */}
       {/* bg-[linear-gradient(to_right,#dab3ff_50%,white_50%)] */}
-      <body className="">
+      <body className="min-h-screen flex flex-col">
  
         <CartContext>
         {/* <ThemeProvider> */}
           <Navbar/>
      
-          <main className="">
+          <main className="flex-1">
         {children}
         </main>
       

@@ -7,6 +7,10 @@ import Img4 from "../../components/hero4.png";
 import Image from "next/image";
 import { FaEye } from "react-icons/fa6";
 import { FaShopLock } from "react-icons/fa6";
+import { CiDeliveryTruck } from "react-icons/ci";
+import { RiSecurePaymentLine } from "react-icons/ri";
+import { TbTruckReturn } from "react-icons/tb";
+import { RiRefund2Fill } from "react-icons/ri";
 
 import categoryImg from "../../components/categoryImg.png";
 import categoryImg2 from "../../components/categoryImg2.jpg";
@@ -283,11 +287,13 @@ export default async function Home() {
 <div className="w-full flex gap-4 justify-center mt-5">
 
 
-<ul className="pl-30 flex flex-col gap-4">
-<li className="text-primary font-semibold font-nz-guides text-2xl pl-4">Secure Payment</li>
-<li className="text-primary font-semibold font-nz-guides text-2xl pl-8">Fast Deilvery</li>
-<li className="text-primary font-semibold font-nz-guides text-2xl pl-12">Easy Return</li>
-<li className="text-primary font-semibold font-nz-guides text-2xl pl-16">Refundable Products</li>
+<ul className="pl-30 flex flex-col gap-2">
+<li className="text-primary font-semibold font-nz-guides text-xl pl-4 flex items-center gap-4"><RiSecurePaymentLine className="text-2xl" />   <span>Secure Payment</span></li>
+<li className="text-primary font-semibold font-nz-guides text-xl pl-8 flex items-center gap-4"><CiDeliveryTruck className="text-2xl"  />    <span>Fast Deilvery</span></li>
+
+<li className="text-primary font-semibold font-nz-guides text-xl pl-12 flex items-center gap-4"><RiRefund2Fill className="text-2xl"/> <span>Refundable Products</span></li>
+
+<li className="text-primary font-semibold font-nz-guides text-xl pl-18 flex items-center gap-4"><TbTruckReturn  className="text-2xl" />   <span>Easy Return</span></li>
 </ul>
 
 
@@ -296,8 +302,8 @@ export default async function Home() {
 
 </div>
 
- <div className="absolute left-1/2 w-100 h-100 rounded-full bg-primary/10 opacity-30 flex items-center justify-center">
- <div className="w-40 h-40 rounded-full bg-primary/10 opacity-90"></div>
+ <div className="absolute left-1/2 w-100 h-100 rounded-full bg-primary/10 opacity-40 flex items-center justify-center">
+ <div className="w-40 h-40 rounded-full bg-primary/20 opacity-90"></div>
  
  </div>
 {/* ************************* */}
@@ -309,8 +315,8 @@ export default async function Home() {
 
 <div className="col-span-4 relative">
 
-<div className="absolute bg-primary/20 h-80 w-80 rounded-full opacity-10"></div>
-<div className="absolute bg-primary/20 h-40 w-40 rounded-full opacity-10"></div>
+<div className="absolute bg-primary/20 h-50 w-50 rounded-full opacity-20"></div>
+<div className="absolute bg-primary/20 h-40 w-40 rounded-full opacity-20"></div>
 
 
 <Image src={"/shoppingstore.png"} width={900} height={900} alt="store_img" className="z-50"/>
