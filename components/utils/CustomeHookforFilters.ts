@@ -7,11 +7,12 @@ export default  function useFilterHook(){
 const  router = useRouter();
 const pathname=usePathname();
 const params= useSearchParams();
+// ****************************************//
 const selectedCategory =params.get("category") || "All";
  const selectedSortingOrder=params.get("sorting") || "";
 const searchedtext=params.get("search")|| "";
 
-
+// *******************************************//
 function applyFilter(key:string,value:string){
 
 const current = params.get(key) || "";

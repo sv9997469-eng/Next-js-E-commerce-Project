@@ -7,10 +7,19 @@ export default async function ProductPageContent({url}){
   const res = await fetch(url);
 
 if(!res.ok){
+const errormessage =await res.json();
+
   if(res.status===404){
     notFound()
   }
-throw new Error("Failed to fetch product")
+
+return (<>
+<p>Error loading products...</p>
+
+<p>{errormessage.message || "something went wrong. please try later!!"}</p>
+
+
+</>)
 
 }
 
@@ -20,8 +29,14 @@ throw new Error("Failed to fetch product")
   const data = result.products;
   const totalProducts = result.totalLength;
   const limit = result.limit;
-  // console.log(arr)
-  // console.log(data);
+  
+if(data.length===0){
+  return (<> <p className="py-4">No result found</p>
+  <p>Try adjusting your search result.</p>
+  
+  </>)
+}
+
 
     return(<>
     

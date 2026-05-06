@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import products from "../../../../public/products.json";
 export function GET(req:NextRequest){
+
+
+try{
+
 const res= req.nextUrl.searchParams;
 let filtered=[...products];
 
@@ -8,14 +12,20 @@ let filtered=[...products];
   const searchText = res.get("search") || "";
   const sorting = res.get("sorting")|| ""
   const page = Number(res.get("page")) || 1;
-  const limit = Number(res.get("limit")) || 10;
-
+  const limit =Number(res.get("limit")) || 10;
+  
 
 
 
 
 
 if (category !== "All") {
+const categoryExsist=filtered.some((val)=>val.category===category);
+if(!categoryExsist){
+  return NextResponse.json({message:"Product not found"},{status:404})
+}
+   
+
     filtered = filtered.filter((val) => val.category === category);
   }
 
@@ -39,20 +49,24 @@ if (category !== "All") {
 
   const total = filtered.length;
   const totalPages = Math.ceil(total / limit);
-
-  if (page > totalPages && totalPages > 0) {
-    return NextResponse.json(
-      { message: "Page not found", code: "PAGE_ERROR" },
-      { status: 404 }
-    );
-  }
-
   const startIndex = (page - 1) * limit;
+
+  if(startIndex>=total && total>0){
+  return NextResponse.json({message:"Page not found"},{status:404})
+}
+
+
+
   const paginated = filtered.slice(startIndex, startIndex + limit);
+
+
 
   return NextResponse.json({
     products: paginated,
     totalLength: total,
+    totalPages,
     limit,
-  });
+  });}catch(error){
+return NextResponse.json({message:"Internal Server is busy.Please try later!!"},{status:500})
+  }
 }

@@ -8,18 +8,21 @@ export default function SingleProductPageImages({ data }) {
   // console.log(data)
   // console.log(index)
 
-  // useEffect(() => {
+  useEffect(() => {
    
-  //   const savedCuurenImg = localStorage.getItem("src");
+    const savedCuurenImg = localStorage.getItem("src");
 
-  //   if (savedCuurenImg) {
+    if (savedCuurenImg) {
      
-  //     setDefaultSrc(savedCuurenImg);
-  //   } else {
+      setDefaultSrc(savedCuurenImg);
+    } else {
     
-  //     setDefaultSrc(data[0]);
-  //   }
-  // }, []);
+      setDefaultSrc(data[0]);
+    }
+
+return ()=>localStorage.clear()
+
+  }, []);
 
 function selectImg(value){
  setDefaultSrc(value);

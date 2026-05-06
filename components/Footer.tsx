@@ -5,8 +5,8 @@ export default function Footer() {
 <section style={{backgroundImage:"url('/footerbg.svg')"}} className="bg-cover bg-center min-h-[350px] px-8 mt-4">
   <div className="max-w-7xl mx-auto bg-white/20 backdrop-blur-xl h-full rounded-xl">
 
-<div className="flex items-center justify-between p-6">
-   <div className="">
+<div className="grid grid-cols-12 gap-6 md:gap-4 items-center lg:justify-between p-6">
+   <div className="col-span-12 md:col-span-6 lg:col-span-3">
       <h2 className="text-white text-2xl font-bold mb-3">E-Mart</h2>
       <p className="text-sm text-primary">
        Grab best deals at afforable price.
@@ -14,7 +14,7 @@ export default function Footer() {
     </div>
 
     {/* Links */}
-    <div>
+    <div className="col-span-12 md:col-span-6 lg:col-span-3">
       <h3 className="text-white font-semibold mb-3">Quick Links</h3>
       <ul className="space-y-2 text-sm">
         <li><a href="#" className="text-white hover:text-primary">Home</a></li>
@@ -25,7 +25,7 @@ export default function Footer() {
     </div>
 
     {/* Resources */}
-    <div>
+    <div className="col-span-12 md:col-span-6 lg:col-span-3">
       <h3 className="text-white font-semibold mb-3">Resources</h3>
       <ul className="space-y-2 text-sm">
         <li><a href="#" className="text-white hover:text-primary">Blog</a></li>
@@ -36,7 +36,7 @@ export default function Footer() {
     </div>
 
     {/* Newsletter */}
-    <div>
+    <div className="col-span-12 md:col-span-6 lg:col-span-3">
       <h3 className="text-white font-semibold mb-3">Subscribe</h3>
       <p className="text-sm mb-3 text-primary">Get latest updates and offers.</p>
       <input
