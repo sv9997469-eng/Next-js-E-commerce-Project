@@ -40,10 +40,11 @@ if(data.length===0){
 
     return(<>
     
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-              {data.map((val) => (
-                <Card key={val.id} product={val} />
-              ))}
+<div className="grid grid-cols-12 gap-6 mt-8">
+              {data.map((val)=>{
+               return  <div key={val.id}   className="col-span-12 md:col-span-6 lg:col-span-4   flex flex-col  transition-all duration-300">
+                <Card  product={val} /></div>
+})}
               
             </div>
 

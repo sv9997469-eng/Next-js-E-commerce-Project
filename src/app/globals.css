@@ -13,7 +13,7 @@
   
   /* --color-bg: rgb(101,85,223); */
   --color-text:  rgba(0,0,0,0.85);
-  --color-muted: rgb(0,0,0,0.5);
+  --color-muted: gray;
   --color-secondary:rgb(226, 232, 240);
   /* font */
   --font-nz-guides:"Playwrite NZ Guides",cursive;

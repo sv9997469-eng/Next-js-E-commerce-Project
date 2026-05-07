@@ -36,6 +36,7 @@ function selectImg(value){
     <>
 
  <div className="col-span-12 flex items-center rounded-lg">
+  {/* change */}
         <div className="h-90 rounded-lg w-full flex items-center justify-center relative">
           <Image
             src={defaultSrc}

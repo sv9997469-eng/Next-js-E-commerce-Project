@@ -2,7 +2,7 @@
 
 import { CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import { useCartContext } from "./cartcontext/CartProvider";
 export default function AddtoCart({ singleProduct }) {
   const { cartItems, addTocart, increaseItems, decreaseItems } =
@@ -49,20 +49,20 @@ export default function AddtoCart({ singleProduct }) {
 
       <div className="flex gap-5 items-center mt-3">
         {/*  */}
-        <Button
+        <button
           className="bg-primary cursor-pointer  px-4 py-2 whitespace-nowrap text-white font-medium flex items-center justify-center gap-2  rounded-xl text-md disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-purple-600 transition-all duration-300"
           onClick={() => addTocart(singleProduct)}
           disabled={quantity >= singleProduct.stock}
         >
           Add to Cart <CiShoppingCart className="font-bold text-2xl" />
-        </Button>
+        </button>
         {/*  */}
-        <Button
-          variant={"outline"}
-          className="text-primary border-primary hover:bg-primary text-md"
+        <button
+        
+          className= "cursor-pointer bg-gray-600     px-4 py-2 whitespace-nowrap text-white font-medium flex items-center justify-center gap-2  rounded-xl text-md disabled:bg-gray-300 disabled:cursor-not-allowed hover:bg-gray-400 transition-all duration-300"
         >
           Buy Now
-        </Button>
+        </button>
         {/*  */}
         <CiHeart className="text-4xl text-primary cursor-pointer" />
         {/*  */}

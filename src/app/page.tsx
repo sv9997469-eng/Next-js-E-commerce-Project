@@ -138,11 +138,17 @@ export default async function Home() {
           </div>
           <hr className="text-gray-200/60" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 py-8">
-            {data.map((val) => (
-              <Card key={val.id} product={val} />
-            ))}
-          </div>
+          <div className="grid grid-cols-12  gap-6 py-8">
+            
+            {data.map((val) =>{
+
+            return <div className="col-span-12 md:col-span-6 lg:col-span-3">
+             <Card key={val.id} product={val} />
+             </div>
+             
+})}
+</div>
+         
         </div>
       </section>
 

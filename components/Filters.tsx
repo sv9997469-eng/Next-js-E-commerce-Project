@@ -10,7 +10,7 @@ export default function Filters() {
 
   return (
     <>
-      <div className="ms-4 w-64 shrink-0 h-[85dvh] sticky px-3 py-10  rounded-xl bg-linear-to-tr from-primary to-indigo-800">
+      <div className="hidden lg:block  ms-4 w-64 shrink-0 h-[85dvh] sticky px-3 py-10  rounded-xl bg-primary/50">
         <div className="h-full overflow-y-auto p-5  no-scrollbar bg-white/20 backdrop-blur-lg rounded-xl ">
           <section>
             <p className="text-lg font-semibold text-white/80 mb-3">Category</p>

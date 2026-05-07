@@ -36,7 +36,7 @@ export default async function Products({ searchParams }) {
 
 
           {/*  */}
-          <Suspense fallback={<ProductCardSkelton />}>
+          <Suspense key ={query}    fallback={<ProductCardSkelton />}>
             <ProductPageContent url={url} />
           </Suspense>
         </div>

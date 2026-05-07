@@ -1,6 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { IoDiscOutline } from "react-icons/io5";
-import Link from "next/link";
+// import Link from "next/link";
 
 import AddtoCart from "../../../../components/AddtoCart";
 import { Rating } from "../../../../components/Rating";
@@ -20,7 +20,9 @@ export default async function SingleProduct({ params }) {
         
      
 <div className="max-w-6xl mx-auto mt-12 px-6">
-      <div className="grid lg:grid-cols-2 gap-10 px-30 mt-5 bg-transparent    rounded-4xl  py-4 items-start  z-40">
+
+      <div className="grid lg:grid-cols-2 gap-10 px-30 mt-5 bg-transparent  rounded-4xl  py-4 items-start  z-40">
+        
         <div className="grid grid-cols-12 gap-4 py-2 border border-gray-300 rounded-md   px-4">
           
          {data?.image && <SingleProductPageImages data={data?.image} />}

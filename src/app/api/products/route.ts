@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import products from "../../../../public/products.json";
+
 export function GET(req:NextRequest){
 
 
